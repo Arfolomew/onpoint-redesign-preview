@@ -594,7 +594,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 @media (max-width: 768px) {
   .hero {
     padding: 100px 24px 72px;
-    text-align: left;
+    text-align: center;
   }
   .hero__heading {
     font-size: clamp(4.5rem, 18vw, 7rem);
