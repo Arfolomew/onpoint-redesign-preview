@@ -9,13 +9,13 @@ function initAnimations() {
 
     // Set initial states
     gsap.set('.hero__accent--top', { opacity: 0, scale: 0.7 });
-    gsap.set('.hero__text', { opacity: 0, x: -200 });
+    gsap.set('.hero__text', { opacity: 0, scale: 0.3 });
     gsap.set('.hero__accent--bottom', { opacity: 0, scale: 0.7 });
     gsap.set('.hero__subtitle', { opacity: 0, y: 20 });
     gsap.set('.hero__btn', { opacity: 0, y: 20 });
     gsap.set('.hero__marquee', { opacity: 0, y: 30 });
 
-    // Fire right as loader fades (loader hidden at 1800ms)
+    // Fire right as loader fades
     const loaderDelay = 2000;
 
     setTimeout(() => {
@@ -32,39 +32,29 @@ function initAnimations() {
         // Brief pause
         tl.to({}, { duration: 0.15 });
 
-        // 2. "ON POINT" slides in from left
+        // 2. "ON POINT" zooms in and overshoots
         tl.to('.hero__text', {
             opacity: 1,
-            x: 0,
-            duration: 0.35,
+            scale: 1.08,
+            duration: 0.25,
             ease: 'power4.out',
             stagger: 0.06
         });
 
-        // Abrupt bounce — overshoot right, snap back
-        tl.to('.hero__heading', {
-            x: 18,
-            duration: 0.1,
-            ease: 'power2.in'
-        });
-        tl.to('.hero__heading', {
-            x: -10,
-            duration: 0.1,
-            ease: 'power2.out'
-        });
-        tl.to('.hero__heading', {
-            x: 5,
+        // Snap back with bounce
+        tl.to('.hero__text', {
+            scale: 0.97,
             duration: 0.08,
             ease: 'power1.in'
         });
-        tl.to('.hero__heading', {
-            x: -2,
-            duration: 0.07,
+        tl.to('.hero__text', {
+            scale: 1.02,
+            duration: 0.06,
             ease: 'power1.out'
         });
-        tl.to('.hero__heading', {
-            x: 0,
-            duration: 0.06,
+        tl.to('.hero__text', {
+            scale: 1,
+            duration: 0.05,
             ease: 'power1.inOut'
         });
 
