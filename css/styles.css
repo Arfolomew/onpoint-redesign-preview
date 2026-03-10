@@ -599,7 +599,10 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
     text-align: center;
   }
   .hero__heading {
-    font-size: clamp(4.5rem, 18vw, 7rem);
+    font-size: clamp(5rem, 20vw, 8rem);
+  }
+  .hero__line {
+    display: block;
   }
   .hero__btn {
     text-align: center;
@@ -607,7 +610,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 }
 @media (max-width: 380px) {
   .hero__heading {
-    font-size: 3.8rem;
+    font-size: clamp(3.8rem, 18vw, 5rem);
   }
   .hero__btn {
     font-size: 0.8rem;
