@@ -458,7 +458,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 /* Main heading — huge Anton */
 .hero__heading {
   font-family: var(--font-body);
-  font-size: clamp(3.5rem, 12vw, 10rem);
+  font-size: clamp(4.5rem, 14vw, 13rem);
   font-weight: 900;
   line-height: 1;
   letter-spacing: -0.02em;
@@ -495,11 +495,11 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 }
 .hero__accent--top {
   transform: rotate(-4deg);
-  margin-bottom: 8px;
+  margin-bottom: -4px;
 }
 .hero__accent--bottom {
   transform: rotate(3deg);
-  margin-top: 8px;
+  margin-top: -4px;
   margin-bottom: 24px;
 }
 
@@ -597,7 +597,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
     text-align: left;
   }
   .hero__heading {
-    font-size: clamp(2.8rem, 11vw, 5rem);
+    font-size: clamp(3.5rem, 14vw, 6rem);
   }
   .hero__btn {
     text-align: center;
@@ -605,7 +605,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 }
 @media (max-width: 380px) {
   .hero__heading {
-    font-size: 2.5rem;
+    font-size: 3rem;
   }
   .hero__btn {
     font-size: 0.8rem;
