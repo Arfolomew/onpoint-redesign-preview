@@ -9,7 +9,7 @@ function initAnimations() {
 
     // Set initial states
     gsap.set('.hero__accent--top', { opacity: 0, scale: 0.7 });
-    gsap.set('.hero__text', { opacity: 0, y: -120 });
+    gsap.set('.hero__text', { opacity: 0, x: -200 });
     gsap.set('.hero__accent--bottom', { opacity: 0, scale: 0.7 });
     gsap.set('.hero__subtitle', { opacity: 0, y: 20 });
     gsap.set('.hero__btn', { opacity: 0, y: 20 });
@@ -30,40 +30,40 @@ function initAnimations() {
         });
 
         // Brief pause
-        tl.to({}, { duration: 0.2 });
+        tl.to({}, { duration: 0.15 });
 
-        // 2. "ON" and "POINT" text drops in
+        // 2. "ON POINT" slides in from left
         tl.to('.hero__text', {
             opacity: 1,
-            y: 0,
-            duration: 0.3,
+            x: 0,
+            duration: 0.35,
             ease: 'power4.out',
-            stagger: 0.08
+            stagger: 0.06
         });
 
-        // Abrupt bounce on the whole heading
+        // Abrupt bounce — overshoot right, snap back
         tl.to('.hero__heading', {
-            y: 16,
+            x: 18,
             duration: 0.1,
             ease: 'power2.in'
         });
         tl.to('.hero__heading', {
-            y: -8,
+            x: -10,
             duration: 0.1,
             ease: 'power2.out'
         });
         tl.to('.hero__heading', {
-            y: 5,
+            x: 5,
             duration: 0.08,
             ease: 'power1.in'
         });
         tl.to('.hero__heading', {
-            y: -2,
+            x: -2,
             duration: 0.07,
             ease: 'power1.out'
         });
         tl.to('.hero__heading', {
-            y: 0,
+            x: 0,
             duration: 0.06,
             ease: 'power1.inOut'
         });
