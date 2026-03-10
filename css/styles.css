@@ -513,12 +513,27 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 
 @media (max-width: 768px) {
   .hero__accent--left {
-    font-size: 20px;
-    right: calc(100% + 14px);
+    font-size: 2.2rem;
+    position: relative;
+    right: auto;
+    top: auto;
+    transform: rotate(-3deg);
+    display: block;
+    margin-bottom: 8px;
   }
   .hero__accent--right {
-    font-size: 20px;
-    left: calc(100% + 10px);
+    font-size: 2.2rem;
+    position: relative;
+    left: auto;
+    top: auto;
+    transform: rotate(3deg);
+    display: block;
+    margin-top: 8px;
+  }
+  .hero__line--on {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -623,14 +638,6 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 @media (max-width: 380px) {
   .hero__heading {
     font-size: 3.5rem;
-  }
-  .hero__accent--left {
-    font-size: 18px;
-    right: calc(100% + 10px);
-  }
-  .hero__accent--right {
-    font-size: 18px;
-    left: calc(100% + 8px);
   }
   .hero__btn {
     font-size: 0.8rem;
