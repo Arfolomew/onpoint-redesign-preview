@@ -465,7 +465,6 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
   text-transform: uppercase;
   color: #1a1a1a;
   margin: 0 0 32px;
-  white-space: nowrap;
 }
 
 .hero__line {
