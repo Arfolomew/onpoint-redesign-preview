@@ -373,7 +373,10 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
   visibility: hidden;
   transition: all 0.4s;
   padding: 32px;
-  background: #fff !important;
+  background:
+    repeating-linear-gradient(90deg, rgba(0,0,0,0.06) 0, rgba(0,0,0,0.06) 1px, transparent 1px, transparent 30px),
+    repeating-linear-gradient(0deg, rgba(0,0,0,0.06) 0, rgba(0,0,0,0.06) 1px, transparent 1px, transparent 30px),
+    #fff !important;
 }
 .mobile-menu.open { opacity: 1; visibility: visible; }
 .mobile-menu a {
