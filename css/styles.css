@@ -498,14 +498,14 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 .hero__accent--left {
   font-size: clamp(2rem, 3.5vw, 3rem);
   right: calc(100% + 50px);
-  top: 0;
+  top: 25%;
   transform: rotate(-6deg);
   color: #1a1a1a;
 }
 .hero__accent--right {
   font-size: clamp(1.8rem, 3vw, 2.8rem);
   left: calc(100% + 50px);
-  top: 0;
+  top: 25%;
   transform: rotate(4deg);
   color: #1a1a1a;
 }
@@ -543,6 +543,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
   color: #fff;
   text-decoration: none;
   padding: 18px 48px;
+  white-space: nowrap;
   background: #a24436;
   border: 2px solid #1a1a1a;
   border-radius: 0;
@@ -615,7 +616,6 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
     font-size: clamp(4.5rem, 22vw, 8rem);
   }
   .hero__btn {
-    width: 50%;
     text-align: center;
   }
 }
