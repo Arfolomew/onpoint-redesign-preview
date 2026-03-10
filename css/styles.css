@@ -471,6 +471,13 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
   display: inline;
 }
 
+.hero__hand {
+  display: block;
+  width: 60px;
+  height: auto;
+  margin: 16px auto 0;
+}
+
 /* GSAP initial state — prevent flash */
 .hero__text,
 .hero__subtitle,
