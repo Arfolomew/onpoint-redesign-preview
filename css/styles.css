@@ -470,14 +470,10 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 .hero__line {
   display: block;
 }
-.hero__line--on {
-  position: relative;
-  display: inline-block;
-}
 
 /* GSAP initial state — prevent flash */
-.hero__accent--left,
-.hero__accent--right,
+.hero__accent--top,
+.hero__accent--bottom,
 .hero__text,
 .hero__subtitle,
 .hero__btn,
@@ -489,58 +485,23 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
   font-weight: 400;
   font-style: italic;
   color: #1a1a1a;
-  position: absolute;
   white-space: nowrap;
   text-transform: lowercase;
   text-decoration: underline;
   text-underline-offset: 4px;
   letter-spacing: -0.01em;
+  font-size: clamp(2.2rem, 4vw, 3.5rem);
 }
-.hero__accent--left {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  right: calc(100% + 50px);
-  top: 35%;
-  transform: rotate(-6deg);
-  color: #1a1a1a;
+.hero__accent--top {
+  transform: rotate(-4deg);
+  margin-bottom: 8px;
 }
-.hero__accent--right {
-  font-size: clamp(1.8rem, 3vw, 2.8rem);
-  left: calc(100% + 50px);
-  top: 35%;
-  transform: rotate(4deg);
-  color: #1a1a1a;
+.hero__accent--bottom {
+  transform: rotate(3deg);
+  margin-top: 8px;
 }
 
-@media (max-width: 768px) {
-  .hero__accent--left {
-    font-size: 2.2rem;
-    position: relative;
-    right: auto;
-    top: auto;
-    transform: rotate(-3deg);
-    display: block;
-    margin-bottom: 8px;
-  }
-  .hero__accent--right {
-    font-size: 2.2rem;
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%) rotate(3deg);
-    top: auto;
-    bottom: -40px;
-    right: auto;
-    display: block;
-  }
-  .hero__line--on {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  .hero__heading {
-    position: relative;
-    margin-bottom: 48px;
-  }
-}
+
 
 /* Subtitle */
 .hero__subtitle {

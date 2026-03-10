@@ -8,9 +8,9 @@ gsap.registerPlugin(ScrollTrigger);
 function initAnimations() {
 
     // Set initial states
-    gsap.set('.hero__accent--left', { opacity: 0, scale: 0.7 });
+    gsap.set('.hero__accent--top', { opacity: 0, scale: 0.7 });
     gsap.set('.hero__text', { opacity: 0, y: -120 });
-    gsap.set('.hero__accent--right', { opacity: 0, scale: 0.7 });
+    gsap.set('.hero__accent--bottom', { opacity: 0, scale: 0.7 });
     gsap.set('.hero__subtitle', { opacity: 0, y: 20 });
     gsap.set('.hero__btn', { opacity: 0, y: 20 });
     gsap.set('.hero__marquee', { opacity: 0, y: 30 });
@@ -21,8 +21,8 @@ function initAnimations() {
     setTimeout(() => {
         const tl = gsap.timeline();
 
-        // 1. "we're" pops in alone
-        tl.to('.hero__accent--left', {
+        // 1. "we're" pops in
+        tl.to('.hero__accent--top', {
             opacity: 1,
             scale: 1,
             duration: 0.5,
@@ -69,7 +69,7 @@ function initAnimations() {
         });
 
         // 3. "nice to meet you!" pops in
-        tl.to('.hero__accent--right', {
+        tl.to('.hero__accent--bottom', {
             opacity: 1,
             scale: 1,
             duration: 0.5,
