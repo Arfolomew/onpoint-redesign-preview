@@ -373,10 +373,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
   visibility: hidden;
   transition: all 0.4s;
   padding: 32px;
-  background:
-    repeating-linear-gradient(90deg, rgba(0,0,0,0.06) 0, rgba(0,0,0,0.06) 1px, transparent 1px, transparent 30px),
-    repeating-linear-gradient(0deg, rgba(0,0,0,0.06) 0, rgba(0,0,0,0.06) 1px, transparent 1px, transparent 30px),
-    #fff !important;
+  background: #ffcd61 !important;
 }
 .mobile-menu.open { opacity: 1; visibility: visible; }
 .mobile-menu a {
@@ -475,35 +472,12 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 }
 
 /* GSAP initial state — prevent flash */
-.hero__accent--top,
-.hero__accent--bottom,
 .hero__text,
 .hero__subtitle,
 .hero__btn,
 .hero__marquee { opacity: 0; }
 
-/* Handwritten accent text */
-.hero__accent {
-  font-family: 'Caveat', cursive !important;
-  font-weight: 400;
-  font-style: italic;
-  color: #1a1a1a;
-  white-space: nowrap;
-  text-transform: lowercase;
-  text-decoration: underline;
-  text-underline-offset: 4px;
-  letter-spacing: -0.01em;
-  font-size: clamp(2.2rem, 4vw, 3.5rem);
-}
-.hero__accent--top {
-  transform: rotate(-4deg);
-  margin-bottom: -4px;
-}
-.hero__accent--bottom {
-  transform: rotate(3deg);
-  margin-top: -10px;
-  margin-bottom: 24px;
-}
+
 
 
 
