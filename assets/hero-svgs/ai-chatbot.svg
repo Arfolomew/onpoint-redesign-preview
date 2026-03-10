@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- Main chat bubble -->
+  <path d="M60 100 Q60 70, 90 70 L310 70 Q340 70, 340 100 L340 220 Q340 250, 310 250 L160 250 L110 290 L120 250 L90 250 Q60 250, 60 220 Z" 
+    stroke="#a855f7" stroke-width="2" fill="rgba(168,85,247,0.06)"/>
+  <!-- Circuit lines inside bubble -->
+  <line x1="100" y1="120" x2="160" y2="120" stroke="#a855f7" stroke-width="1.5" opacity="0.3"/>
+  <line x1="160" y1="120" x2="160" y2="160" stroke="#a855f7" stroke-width="1.5" opacity="0.3"/>
+  <line x1="160" y1="160" x2="240" y2="160" stroke="#a855f7" stroke-width="1.5" opacity="0.3"/>
+  <line x1="200" y1="120" x2="280" y2="120" stroke="#a855f7" stroke-width="1.5" opacity="0.2"/>
+  <line x1="240" y1="160" x2="240" y2="200" stroke="#a855f7" stroke-width="1.5" opacity="0.2"/>
+  <line x1="100" y1="200" x2="200" y2="200" stroke="#a855f7" stroke-width="1.5" opacity="0.2"/>
+  <!-- Circuit nodes -->
+  <circle cx="160" cy="120" r="4" fill="#a855f7" opacity="0.5"/>
+  <circle cx="160" cy="160" r="4" fill="#a855f7" opacity="0.5"/>
+  <circle cx="240" cy="160" r="5" fill="#a855f7" opacity="0.7"/>
+  <circle cx="240" cy="200" r="3" fill="#a855f7" opacity="0.4"/>
+  <circle cx="100" cy="200" r="3" fill="#a855f7" opacity="0.3"/>
+  <!-- AI brain/sparkle at center node -->
+  <circle cx="240" cy="160" r="14" stroke="#e8d5b8" stroke-width="1.5" opacity="0.4"/>
+  <path d="M236 156 L240 148 L244 156" stroke="#e8d5b8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <path d="M236 164 L240 172 L244 164" stroke="#e8d5b8" stroke-width="1.5" stroke-linecap="round" opacity="0.5"/>
+  <!-- Typing indicator dots -->
+  <circle cx="110" cy="230" r="5" fill="#e8d5b8" opacity="0.3"/>
+  <circle cx="130" cy="230" r="5" fill="#e8d5b8" opacity="0.45"/>
+  <circle cx="150" cy="230" r="5" fill="#e8d5b8" opacity="0.6"/>
+  <!-- Small reply bubble -->
+  <rect x="200" y="300" width="160" height="50" rx="14" stroke="#a855f7" stroke-width="1.5" opacity="0.25" fill="rgba(168,85,247,0.04)"/>
+  <rect x="220" y="316" width="60" height="6" rx="3" fill="#e8d5b8" opacity="0.25"/>
+  <rect x="220" y="328" width="40" height="6" rx="3" fill="#e8d5b8" opacity="0.15"/>
+  <!-- Connection line between bubbles -->
+  <line x1="280" y1="300" x2="280" y2="270" stroke="#a855f7" stroke-width="1" opacity="0.15" stroke-dasharray="4 4"/>
+</svg>

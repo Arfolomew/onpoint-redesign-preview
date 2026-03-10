@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <!-- Teal glow for power arc -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="4" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="400" height="500" fill="#FFFEF5"/>
+
+  <!-- Pin body - geometric/modern with slightly squared shoulders -->
+  <path d="M200 455
+           C200 455 90 275 90 185
+           C90 120 138 70 200 70
+           C262 70 310 120 310 185
+           C310 275 200 455 200 455Z"
+        fill="#111114" stroke="none"/>
+
+  <!-- Subtle inner ring to frame the power symbol -->
+  <circle cx="200" cy="185" r="68" fill="none" stroke="#222228" stroke-width="2"/>
+
+  <!-- Power symbol - arc (teal) -->
+  <path d="M160 160 A50 50 0 1 0 240 160"
+        fill="none" stroke="#4ecdc4" stroke-width="11" stroke-linecap="round"
+        filter="url(#glow)"/>
+
+  <!-- Power symbol - vertical line (cream) -->
+  <line x1="200" y1="128" x2="200" y2="178"
+        stroke="#f0e6d3" stroke-width="11" stroke-linecap="round"/>
+
+  <!-- Label -->
+  <text x="200" y="490" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#999" letter-spacing="1">GEOMETRIC + TEAL GLOW</text>
+</svg>

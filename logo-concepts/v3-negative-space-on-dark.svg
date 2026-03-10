@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <defs>
+    <mask id="power-cutout">
+      <rect width="400" height="500" fill="white"/>
+      <!-- Cut out the power arc -->
+      <path d="M158 158 A52 52 0 1 0 242 158"
+            fill="none" stroke="black" stroke-width="14" stroke-linecap="round"/>
+      <!-- Cut out the vertical line -->
+      <line x1="200" y1="124" x2="200" y2="176"
+            stroke="black" stroke-width="14" stroke-linecap="round"/>
+    </mask>
+  </defs>
+
+  <!-- Dark background (simulating navbar) -->
+  <rect width="400" height="500" fill="#111114"/>
+
+  <!-- Pin body in cream — power symbol cut out reveals dark bg -->
+  <path d="M200 455
+           C200 455 85 278 85 182
+           C85 115.7 136.7 65 200 65
+           C263.3 65 315 115.7 315 182
+           C315 278 200 455 200 455Z"
+        fill="#f0e6d3" mask="url(#power-cutout)"/>
+
+  <!-- Label -->
+  <text x="200" y="490" text-anchor="middle" font-family="sans-serif" font-size="11" fill="#666" letter-spacing="1">NEGATIVE SPACE — ON DARK BG</text>
+</svg>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>On Point — Navbar Logo Mockup</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    background: #0a0a0c;
+    font-family: 'General Sans', sans-serif;
+    color: #f0e6d3;
+  }
+
+  .label {
+    text-align: center;
+    padding: 30px 0 15px;
+    font-family: monospace;
+    font-size: 12px;
+    color: #666;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+  }
+
+  /* --- Navbar mockup --- */
+  .nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    height: 80px;
+    border-bottom: 1px solid rgba(240,230,211,0.08);
+    background: rgba(17,17,20,0.95);
+    backdrop-filter: blur(20px);
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  .nav__logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+  }
+
+  .nav__logo-icon {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav__logo-text {
+    font-family: 'Space Mono', monospace;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+    color: #f0e6d3;
+  }
+
+  .nav__links {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+  }
+
+  .nav__link {
+    color: #f0e6d3;
+    text-decoration: none;
+    font-size: 0.9rem;
+    padding: 8px 14px;
+    opacity: 0.7;
+  }
+
+  .nav__dot {
+    width: 3px;
+    height: 3px;
+    background: #f0e6d3;
+    border-radius: 50%;
+    opacity: 0.3;
+  }
+
+  .nav__cta {
+    background: #f0e6d3;
+    color: #111114;
+    padding: 10px 24px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.85rem;
+    letter-spacing: 0.5px;
+  }
+
+  /* Size variants */
+  .nav--small { height: 64px; padding: 0 20px; }
+  .nav--small .nav__logo-icon { width: 38px; height: 38px; }
+  .nav--small .nav__logo-text { font-size: 0.75rem; }
+
+  /* Comparison section */
+  .comparison {
+    max-width: 1200px;
+    margin: 60px auto;
+    padding: 0 40px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+
+  .comparison__item {
+    text-align: center;
+  }
+
+  .comparison__item img,
+  .comparison__item svg {
+    width: 120px;
+    height: 120px;
+    margin: 20px auto;
+    display: block;
+  }
+
+  .comparison__label {
+    font-family: monospace;
+    font-size: 11px;
+    color: #666;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+  }
+</style>
+</head>
+<body>
+
+<div class="label">Desktop Navbar — New Logo</div>
+<nav class="nav">
+  <a href="#" class="nav__logo">
+    <!-- New negative-space pin logo as inline SVG -->
+    <svg class="nav__logo-icon" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="pwr1">
+          <rect width="200" height="280" fill="white"/>
+          <path d="M79 90 A30 30 0 1 0 121 90" fill="none" stroke="black" stroke-width="9" stroke-linecap="round"/>
+          <line x1="100" y1="70" x2="100" y2="100" stroke="black" stroke-width="9" stroke-linecap="round"/>
+        </mask>
+      </defs>
+      <path d="M100 265 C100 265 30 155 30 102 C30 63.4 60.4 33 100 33 C139.6 33 170 63.4 170 102 C170 155 100 265 100 265Z"
+            fill="#f0e6d3" mask="url(#pwr1)"/>
+    </svg>
+    <span class="nav__logo-text">ON POINT</span>
+  </a>
+  <div class="nav__links">
+    <a href="#" class="nav__link">Why Us</a>
+    <span class="nav__dot"></span>
+    <a href="#" class="nav__link">Services</a>
+    <span class="nav__dot"></span>
+    <a href="#" class="nav__link">About</a>
+    <span class="nav__dot"></span>
+    <a href="#" class="nav__link">Blog</a>
+  </div>
+  <a href="#" class="nav__cta">GET STARTED →</a>
+</nav>
+
+<div class="label" style="margin-top: 50px;">Mobile Navbar — New Logo (smaller)</div>
+<nav class="nav nav--small">
+  <a href="#" class="nav__logo">
+    <svg class="nav__logo-icon" viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="pwr2">
+          <rect width="200" height="280" fill="white"/>
+          <path d="M79 90 A30 30 0 1 0 121 90" fill="none" stroke="black" stroke-width="10" stroke-linecap="round"/>
+          <line x1="100" y1="70" x2="100" y2="100" stroke="black" stroke-width="10" stroke-linecap="round"/>
+        </mask>
+      </defs>
+      <path d="M100 265 C100 265 30 155 30 102 C30 63.4 60.4 33 100 33 C139.6 33 170 63.4 170 102 C170 155 100 265 100 265Z"
+            fill="#f0e6d3" mask="url(#pwr2)"/>
+    </svg>
+    <span class="nav__logo-text">ON POINT</span>
+  </a>
+  <a href="#" class="nav__cta">GET STARTED →</a>
+</nav>
+
+<div class="label" style="margin-top: 50px;">Side-by-Side: Current vs New</div>
+<div class="comparison">
+  <div class="comparison__item">
+    <div class="comparison__label">CURRENT LOGO</div>
+    <img src="../assets/onpoint-logo-reversed-icon.png" alt="Current logo">
+  </div>
+  <div class="comparison__item">
+    <div class="comparison__label">NEW — NEGATIVE SPACE PIN</div>
+    <svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <mask id="pwr3">
+          <rect width="200" height="280" fill="white"/>
+          <path d="M79 90 A30 30 0 1 0 121 90" fill="none" stroke="black" stroke-width="9" stroke-linecap="round"/>
+          <line x1="100" y1="70" x2="100" y2="100" stroke="black" stroke-width="9" stroke-linecap="round"/>
+        </mask>
+      </defs>
+      <path d="M100 265 C100 265 30 155 30 102 C30 63.4 60.4 33 100 33 C139.6 33 170 63.4 170 102 C170 155 100 265 100 265Z"
+            fill="#f0e6d3" mask="url(#pwr3)"/>
+    </svg>
+  </div>
+</div>
+
+</body>
+</html>

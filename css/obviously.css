@@ -1,0 +1,202 @@
+/* ═══════════════════════════════════════
+   Obviously Font Family — Self-hosted
+   ═══════════════════════════════════════ */
+
+/* --- Regular width --- */
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-LightItalic.otf') format('opentype');
+  font-weight: 300;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-Italic.otf') format('opentype');
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-Semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-BoldItalic.otf') format('opentype');
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-BlackItalic.otf') format('opentype');
+  font-weight: 900;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-Super.otf') format('opentype');
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously';
+  src: url('../assets/fonts/obviously-font/Obviously-SuperItalic.otf') format('opentype');
+  font-weight: 950;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* --- Wide width --- */
+@font-face {
+  font-family: 'Obviously Wide';
+  src: url('../assets/fonts/obviously-font/Obviously-WideBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Wide';
+  src: url('../assets/fonts/obviously-font/Obviously-WideBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Wide';
+  src: url('../assets/fonts/obviously-font/Obviously-WideSuper.otf') format('opentype');
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Wide';
+  src: url('../assets/fonts/obviously-font/Obviously-WideSuperItalic.otf') format('opentype');
+  font-weight: 950;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* --- Condensed width (big titles, section headers, stats) --- */
+@font-face {
+  font-family: 'Obviously Condensed';
+  src: url('../assets/fonts/obviously-font/Obviously-CondensedBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Condensed';
+  src: url('../assets/fonts/obviously-font/Obviously-CondensedBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Condensed';
+  src: url('../assets/fonts/obviously-font/Obviously-CondensedSuper.otf') format('opentype');
+  font-weight: 950;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Condensed';
+  src: url('../assets/fonts/obviously-font/Obviously-CondensedMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Compressed width (marquee/ticker text) --- */
+@font-face {
+  font-family: 'Obviously Compressed';
+  src: url('../assets/fonts/obviously-font/Obviously-CompressedBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Compressed';
+  src: url('../assets/fonts/obviously-font/Obviously-CompressedBlack.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* --- Narrow width (service lists, labels, uppercase UI) --- */
+@font-face {
+  font-family: 'Obviously Narrow';
+  src: url('../assets/fonts/obviously-font/Obviously-NarrowLight.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Narrow';
+  src: url('../assets/fonts/obviously-font/Obviously-Narrow.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Narrow';
+  src: url('../assets/fonts/obviously-font/Obviously-NarrowMedium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Narrow';
+  src: url('../assets/fonts/obviously-font/Obviously-NarrowSemibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Obviously Narrow';
+  src: url('../assets/fonts/obviously-font/Obviously-NarrowBold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

@@ -1,0 +1,11 @@
+<svg viewBox="0 0 200 280" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <mask id="pwr">
+      <rect width="200" height="280" fill="white"/>
+      <circle cx="100" cy="95" r="35" fill="none" stroke="black" stroke-width="18"/>
+      <circle cx="100" cy="95" r="12" fill="black"/>
+    </mask>
+  </defs>
+  <path d="M100 265 C100 265 30 155 30 102 C30 63.4 60.4 33 100 33 C139.6 33 170 63.4 170 102 C170 155 100 265 100 265Z"
+        fill="#e8d5b8" mask="url(#pwr)"/>
+</svg>

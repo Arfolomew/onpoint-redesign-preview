@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="On Point Blog — Web design tips, SEO strategies, and local New Port Richey news for small businesses in Pinellas & Pasco County, FL.">
+    <meta name="robots" content="index, follow">
+    <title>Blog — On Point | Web Design & SEO Tips for Local Businesses</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/obviously.css">
+    <link rel="stylesheet" href="css/styles.min.css">
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
+    <style>
+        .blog-hero {
+            position: relative;
+            background:
+                repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 30px),
+                repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 30px),
+                #1a1a1a;
+            color: #fff;
+            padding: 160px 40px 80px;
+            text-align: center;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            box-sizing: border-box;
+        }
+        .blog-hero__eyebrow {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            font-family: 'Caveat', cursive;
+            font-size: 2.2rem;
+            font-style: italic;
+            color: var(--golden);
+            margin-bottom: 24px;
+        }
+        .blog-hero__rule {
+            display: block;
+            width: 60px;
+            height: 1px;
+            background: rgba(255, 255, 255, 0.2);
+        }
+        .blog-hero__title {
+            font-family: var(--font-body);
+            font-weight: 900;
+            font-size: clamp(3rem, 8vw, 7rem);
+            color: #ffcd61;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+        .blog-hero__sub {
+            font-family: var(--font-body);
+            font-weight: 500;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.6);
+            max-width: 500px;
+            margin: 0 auto;
+            line-height: 1.7;
+        }
+
+        /* Blog Grid */
+        .blog-section {
+            background: #fff;
+            width: 100vw;
+            margin-left: calc(-50vw + 50%);
+            box-sizing: border-box;
+            padding: 60px 40px 80px;
+            border-top: 2px solid #1a1a1a;
+        }
+        .blog-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 24px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .blog-card {
+            background: #fff;
+            border: 2px solid #1a1a1a;
+            box-shadow: 4px 4px 0 #1a1a1a;
+            padding: 0;
+            text-decoration: none;
+            display: flex;
+            flex-direction: column;
+            transition: all 0.25s ease;
+            overflow: hidden;
+        }
+        .blog-card:hover {
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 #1a1a1a;
+        }
+        .blog-card__img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 2px solid #1a1a1a;
+        }
+        .blog-card__body {
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .blog-card__tag {
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: #a24436;
+            margin-bottom: 10px;
+        }
+        .blog-card__title {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: #1a1a1a;
+            line-height: 1.25;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+        }
+        .blog-card__excerpt {
+            font-family: var(--font-body);
+            color: #444;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+        .blog-card__date {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .blog-empty {
+            text-align: center;
+            padding: 80px 40px;
+            font-family: var(--font-body);
+            color: #444;
+            background: #fff;
+        }
+
+        @media (max-width: 768px) {
+            .blog-hero { padding: 120px 24px 60px; }
+            .blog-section { padding: 40px 24px 60px; }
+            .blog-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <div class="outer-bg" aria-hidden="true"></div>
+
+    <!-- Nav -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nav__logo">OP</a>
+        <div class="nav__links">
+            <a href="index.html#about" class="nav__link">About</a>
+            <a href="pricing.html" class="nav__link">Pricing</a>
+            <a href="portfolio.html" class="nav__link">Work</a>
+            <a href="blog.html" class="nav__link">Blog</a>
+            <a href="index.html#contact" class="nav__link">Contact</a>
+        </div>
+        <a href="index.html#contact" class="nav__cta">Get a Quote</a>
+        <button class="nav__menu-btn" id="nav-menu" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+        <a href="index.html#about">About</a>
+        <a href="pricing.html">Pricing</a>
+        <a href="portfolio.html">Work</a>
+        <a href="blog.html">Blog</a>
+        <a href="index.html#contact">Contact</a>
+    </div>
+
+    <div class="content-frame">
+    <main>
+        <section class="blog-hero">
+            <p class="blog-hero__eyebrow">
+                <span class="blog-hero__rule"></span>
+                the blog
+                <span class="blog-hero__rule"></span>
+            </p>
+            <h1 class="blog-hero__title">Blog</h1>
+            <p class="blog-hero__sub">Web design tips, SEO strategies, and local news to help your business grow.</p>
+        </section>
+
+        <div class="blog-section">
+            <div class="blog-grid" id="blog-grid"></div>
+            <div class="blog-empty" id="blog-empty" style="display:none;">
+                <p>Posts coming soon. Check back!</p>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__brand">
+            <a href="/" class="footer__logo-text">OP</a>
+        </div>
+        <div class="footer__links">
+            <a href="index.html#about">About</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="portfolio.html">Work</a>
+            <a href="blog.html">Blog</a>
+            <a href="index.html#contact">Contact</a>
+            <a href="terms.html">Terms</a>
+            <a href="privacy.html">Privacy</a>
+        </div>
+        <div class="footer__bottom">
+            <p>© 2026 On Point. Web Design & SEO in Pinellas County & Pasco County, FL. All rights reserved.</p>
+            <a href="#" class="footer__top-btn">Back to Top ↑</a>
+        </div>
+    </footer>
+
+    </div>
+
+    <!-- POSTS_DATA_START -->
+    <script>window.__POSTS__ = [
+  {
+    "slug": "tampa-bay-week-ahead-march-8-2026",
+    "title": "This Week in Tampa Bay: St. Patrick's Parties, Beer Fests, and Spring Training (March 8–17)",
+    "date": "2026-03-08",
+    "category": "Local Tampa Bay Events",
+    "excerpt": "Paddy Fest, Tampa Bay Beer Week, Grapefruit League games, and more — here's everything worth your time in Tampa Bay over the next ten days.",
+    "image": "assets/blog/tampa-bay-week-ahead-march-8-2026.jpg"
+  },
+  {
+    "slug": "website-copy-that-converts",
+    "title": "How to Write Website Copy That Actually Gets People to Take Action",
+    "date": "2026-03-07",
+    "category": "Web Design",
+    "excerpt": "Your website might look great — but if the words aren't working, neither is the site. Here's how to write copy that connects and converts.",
+    "image": "assets/blog/website-copy-that-converts.jpg"
+  },
+  {
+    "slug": "local-seo-timeline-what-to-expect",
+    "title": "What Actually Happens When a Local Business Invests in SEO (Month by Month)",
+    "date": "2026-03-06",
+    "category": "Industry Insights",
+    "excerpt": "How long does SEO take to work? Here's a realistic month-by-month breakdown of what local businesses in Tampa Bay can expect — from foundation work to compounding returns.",
+    "image": "assets/blog/local-seo-timeline-what-to-expect.jpg"
+  },
+  {
+    "slug": "schema-markup-local-business-seo",
+    "title": "Schema Markup: The SEO Advantage Most Local Businesses Are Ignoring",
+    "date": "2026-03-05",
+    "category": "SEO & Digital Marketing",
+    "excerpt": "Schema markup tells Google exactly what your business is, where you are, and what you offer — and most local businesses don't have it. Here's why it matters and how it works.",
+    "image": "assets/blog/schema-markup-local-business-seo.jpg"
+  },
+  {
+    "slug": "website-trust-signals-small-business",
+    "title": "7 Trust Signals Your Website Needs (Or You're Losing Customers)",
+    "date": "2026-03-04",
+    "category": "Web Design",
+    "excerpt": "People don't buy from websites they don't trust. Here are seven trust signals every small business site needs — and most are missing at least a few.",
+    "image": "assets/blog/website-trust-signals-small-business.jpg"
+  },
+  {
+    "slug": "mid-march-events-tampa-bay-2026",
+    "title": "Mid-March in Tampa Bay Is Stacked — Here's What's Worth Your Time",
+    "date": "2026-03-02",
+    "category": "Local Tampa Bay Events",
+    "excerpt": "From the Strawberry Festival's final days to Reggae Rise Up, Paddy Fest, and St. Patrick's Day celebrations across Pinellas County — here's your guide to mid-March in Tampa Bay.",
+    "image": "assets/blog/mid-march-events-tampa-bay-2026.jpg"
+  },
+  {
+    "slug": "why-your-local-business-needs-a-blog",
+    "title": "Why Your Local Business Needs a Blog (Even If You Hate Writing)",
+    "date": "2026-03-01",
+    "category": "SEO & Digital Marketing",
+    "excerpt": "A blog isn't about becoming a writer — it's about showing up when people in your area search for answers. Here's how blogging drives local SEO and brings in customers.",
+    "image": "assets/blog/local-business-blogging-seo.jpg"
+  },
+  {
+    "slug": "what-every-small-business-homepage-needs",
+    "title": "What Every Small Business Homepage Needs (And What to Cut)",
+    "date": "2026-02-28",
+    "category": "Web Design",
+    "excerpt": "Your homepage has five seconds to convince someone to stay. Here's what actually matters — and what's just taking up space.",
+    "image": "assets/blog/small-business-homepage.jpg"
+  },
+  {
+    "slug": "diy-vs-professional-web-design",
+    "title": "DIY Website Builders vs. Professional Web Design: An Honest Breakdown",
+    "date": "2026-02-27",
+    "category": "Industry Insights",
+    "excerpt": "Wix and Squarespace have gotten good — but they're not right for every business. Here's an honest look at when DIY works, when it doesn't, and where the real costs hide.",
+    "image": "assets/blog/diy-vs-professional-web-design.jpg"
+  },
+  {
+    "slug": "how-online-reviews-affect-local-seo",
+    "title": "How Online Reviews Actually Affect Your Local SEO (And What to Do About It)",
+    "date": "2026-02-26",
+    "category": "SEO & Digital Marketing",
+    "excerpt": "Reviews don't just build trust — they directly impact whether Google shows your business in local search. Here's how to turn them into a ranking advantage.",
+    "image": "assets/blog/online-reviews-local-seo.jpg"
+  },
+  {
+    "slug": "how-fast-is-your-website-on-mobile",
+    "title": "How Fast Is Your Website on Mobile? (And Why It Matters More Than You Think)",
+    "date": "2026-02-25",
+    "category": "Web Design",
+    "excerpt": "If your site takes more than 3 seconds to load on a phone, half your visitors are already gone. Here's how to test your speed and fix the most common problems.",
+    "image": "assets/blog/mobile-website-speed.jpg"
+  },
+  {
+    "slug": "website-redesign-roi-small-business",
+    "title": "What a Website Redesign Actually Does for a Small Business (Real Numbers)",
+    "date": "2026-02-24",
+    "category": "Industry Insights",
+    "excerpt": "Is redoing your website worth it? We break down the real ROI — conversion rates, revenue impact, and when it actually makes sense.",
+    "image": "assets/blog/website-redesign-roi.jpg"
+  },
+  {
+    "slug": "tampa-bay-events-march-2026",
+    "title": "What's Happening in Tampa Bay This March (2026)",
+    "date": "2026-02-23",
+    "category": "Local Tampa Bay Events",
+    "excerpt": "Gasparilla Festival of the Arts, St. Pete Artwalk, Gulfport Indie Faire, and more — here's what's worth your time in March 2026.",
+    "image": "assets/blog/tampa-bay-events-march-2026.jpg"
+  },
+  {
+    "slug": "google-business-profile-checklist-2026",
+    "title": "Your Google Business Profile Is Probably Half-Finished (Here's How to Fix It)",
+    "date": "2026-02-22",
+    "category": "SEO & Digital Marketing",
+    "excerpt": "Most businesses claim their Google profile and forget about it. Here's a 10-point checklist to actually rank in local search.",
+    "image": "assets/blog/google-business-profile.jpg"
+  },
+  {
+    "slug": "5-reasons-your-website-is-costing-you-customers",
+    "title": "5 Reasons Your Website Is Costing You Customers",
+    "date": "2026-02-21",
+    "category": "Web Design",
+    "excerpt": "Your website should be your best salesperson. Here are five signs it might be working against you instead — and what to do about it.",
+    "image": ""
+  }
+];</script>
+    <!-- POSTS_DATA_END -->
+    <script>
+        const posts = window.__POSTS__ || [];
+        const grid = document.getElementById('blog-grid');
+        const empty = document.getElementById('blog-empty');
+        if (!posts.length) { empty.style.display = 'block'; }
+        else {
+            posts.sort((a, b) => new Date(b.date) - new Date(a.date));
+            posts.forEach(post => {
+                const card = document.createElement('a');
+                card.className = 'blog-card';
+                card.href = 'blog/' + post.slug + '.html';
+                const date = new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+                let imgHtml = post.image ? `<img loading="lazy" class="blog-card__img" src="${post.image}" alt="${post.title}">` : '';
+                card.innerHTML = `${imgHtml}<div class="blog-card__body"><div class="blog-card__tag">${post.category || 'Insight'}</div><div class="blog-card__title">${post.title}</div><div class="blog-card__excerpt">${post.excerpt}</div><div class="blog-card__date">${date}</div></div>`;
+                grid.appendChild(card);
+            });
+        }
+    </script>
+    <script defer src="js/main.min.js"></script>
+</body>
+</html>

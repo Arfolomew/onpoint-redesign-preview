@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://onpointfl.com/sitemap.xml

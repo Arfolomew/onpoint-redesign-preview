@@ -1,0 +1,999 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Website Audit — On Point</title>
+    <meta name="description" content="Get a free, instant audit of your website's performance, SEO, mobile-friendliness, and accessibility. See exactly what's holding your business back.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/obviously.css">
+
+    <style>
+        *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+
+        :root {
+            --dark-text: #1a1a1a;
+            --golden: #ffcd61;
+            --red: #a24436;
+            --white: #ffffff;
+            --font-display: 'Obviously Condensed', 'Arial Black', sans-serif;
+            --font-body: 'Obviously', 'Helvetica Neue', sans-serif;
+        }
+
+        html { font-size: 16px; scroll-behavior: smooth; background: var(--white); color: var(--dark-text); -webkit-font-smoothing: antialiased; }
+        body { font-family: var(--font-body); background: var(--white); overflow-x: hidden; line-height: 1.6; min-height: 100vh; }
+        a { color: inherit; text-decoration: none; }
+        ::selection { background: var(--golden); color: var(--dark-text); }
+
+        /* Nav */
+        .nav {
+            position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+            display: flex; align-items: center; justify-content: space-between;
+            padding: 14px 48px;
+            background: var(--white);
+            border-bottom: 4px solid var(--dark-text);
+        }
+        .nav__logo {
+            font-family: var(--font-display);
+            font-size: 2.8rem;
+            font-weight: 900;
+            color: var(--dark-text);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+            text-transform: uppercase;
+            line-height: 1;
+        }
+        .nav__links { display: flex; align-items: center; gap: 24px; }
+        .nav__link {
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: none;
+            letter-spacing: 0.03em;
+            color: var(--dark-text);
+            text-decoration: none;
+            padding: 10px 24px;
+            background: var(--red);
+            color: var(--white);
+            border: 2px solid var(--dark-text);
+            box-shadow: 4px 4px 0 var(--dark-text);
+            transition: all 0.25s ease;
+        }
+        .nav__link:hover {
+            transform: translate(2px, 2px);
+            box-shadow: 2px 2px 0 var(--dark-text);
+        }
+
+        /* Hero */
+        .audit-hero {
+            background: var(--golden);
+            padding: 140px 48px 80px;
+            text-align: center;
+            border-bottom: 2px solid var(--dark-text);
+            min-height: calc(100vh - 80px);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .audit-hero__label {
+            font-family: 'Caveat', cursive;
+            font-size: 1.6rem;
+            color: var(--dark-text);
+            margin-bottom: 16px;
+        }
+        .audit-hero__title {
+            font-family: var(--font-body);
+            font-size: clamp(2.5rem, 6vw, 5rem);
+            font-weight: 900;
+            line-height: 0.9;
+            text-transform: uppercase;
+            color: var(--dark-text);
+            margin-bottom: 24px;
+        }
+        .audit-hero__title .accent { color: var(--red); }
+        .audit-hero__sub {
+            font-family: var(--font-body);
+            font-size: 1rem;
+            font-weight: 400;
+            color: var(--dark-text);
+            max-width: 540px;
+            margin: 0 auto 48px;
+            line-height: 1.7;
+        }
+
+        /* Form */
+        .audit-form {
+            max-width: 600px;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+        .audit-form__row {
+            display: flex;
+            gap: 12px;
+        }
+        .audit-form__input {
+            flex: 1;
+            padding: 16px 20px;
+            font-family: var(--font-body);
+            font-size: 1rem;
+            background: var(--white);
+            border: 2px solid var(--dark-text);
+            color: var(--dark-text);
+            outline: none;
+            box-shadow: 3px 3px 0 var(--dark-text);
+            transition: border-color 0.3s;
+        }
+        .audit-form__input::placeholder { color: #999; }
+        .audit-form__input:focus { border-color: var(--red); }
+        .audit-form__input:-webkit-autofill,
+        .audit-form__input:-webkit-autofill:hover,
+        .audit-form__input:-webkit-autofill:focus {
+            -webkit-box-shadow: 0 0 0 1000px var(--white) inset !important;
+            -webkit-text-fill-color: var(--dark-text) !important;
+        }
+        .audit-form__btn {
+            padding: 16px 36px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: none;
+            letter-spacing: 0.05em;
+            background: var(--red);
+            color: var(--white);
+            border: 2px solid var(--dark-text);
+            box-shadow: 4px 4px 0 var(--dark-text);
+            cursor: pointer;
+            transition: all 0.25s ease;
+            white-space: nowrap;
+        }
+        .audit-form__btn:hover {
+            background: #8a3a2e;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 var(--dark-text);
+        }
+        .audit-form__btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; }
+        .audit-form__note {
+            font-size: 0.8rem;
+            color: #777;
+            text-align: center;
+        }
+
+        /* Lead Capture */
+        .lead-capture {
+            max-width: 500px;
+            margin: 0 auto;
+            display: none;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .lead-capture.active { display: flex; }
+        .lead-capture__title {
+            font-family: var(--font-body);
+            font-size: 1.3rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 8px;
+        }
+        .lead-capture__sub {
+            font-size: 0.9rem;
+            color: #555;
+            text-align: center;
+            margin-bottom: 12px;
+        }
+        .lead-capture__row { display: flex; flex-direction: column; gap: 12px; }
+
+        /* Loading */
+        .audit-loading {
+            display: none;
+            text-align: center;
+            padding: 60px 40px;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        .audit-loading.active { display: block; }
+        .audit-loading__title {
+            font-family: var(--font-body);
+            font-size: 1.2rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            margin-bottom: 24px;
+            color: var(--dark-text);
+        }
+        .audit-loading__bar {
+            width: 100%;
+            height: 8px;
+            background: var(--white);
+            border: 2px solid var(--dark-text);
+            overflow: hidden;
+            margin-bottom: 20px;
+        }
+        .audit-loading__fill {
+            height: 100%;
+            width: 0%;
+            background: var(--red);
+            transition: width 0.5s ease;
+        }
+        .audit-loading__status {
+            font-size: 0.75rem;
+            color: #777;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        /* Results wrapper */
+        .audit-results {
+            display: none;
+            padding: 60px 40px;
+            background: var(--red);
+            color: #fff;
+        }
+        .audit-results.active { display: block; }
+        .audit-results__inner {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+        .results__url {
+            font-family: var(--font-body);
+            font-size: 0.7rem;
+            font-weight: 600;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.6);
+            margin-bottom: 40px;
+            text-align: center;
+        }
+
+        /* Score Cards */
+        .scores {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 48px;
+        }
+        .score-card {
+            background: #fff;
+            border: 2px solid var(--dark-text);
+            box-shadow: 4px 4px 0 var(--dark-text);
+            padding: 28px 20px;
+            text-align: center;
+            color: var(--dark-text);
+        }
+        .score-card__label {
+            font-family: var(--font-body);
+            font-size: 0.65rem;
+            font-weight: 700;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--dark-text);
+            margin-bottom: 16px;
+        }
+        .score-card__ring {
+            position: relative;
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 16px;
+        }
+        .score-card__ring svg { width: 100%; height: 100%; transform: rotate(-90deg); }
+        .score-card__ring circle {
+            fill: none;
+            stroke-width: 5;
+            cx: 50; cy: 50; r: 44;
+        }
+        .score-card__ring .ring-bg { stroke: #e0e0e0; }
+        .score-card__ring .ring-fill {
+            stroke-dasharray: 276.46;
+            stroke-dashoffset: 276.46;
+            stroke-linecap: square;
+            transition: stroke-dashoffset 1.5s ease;
+        }
+        .score-card__value {
+            position: absolute;
+            top: 50%; left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-body);
+            font-size: 1.6rem;
+            font-weight: 900;
+            color: var(--dark-text);
+        }
+        .score-card__grade {
+            font-family: var(--font-body);
+            font-size: 0.75rem;
+            font-weight: 600;
+            letter-spacing: 0.05em;
+            color: var(--dark-text);
+        }
+
+        /* Details */
+        .details { margin-bottom: 48px; }
+        .details__section {
+            background: #fff;
+            border: 2px solid var(--dark-text);
+            box-shadow: 4px 4px 0 var(--dark-text);
+            margin-bottom: 12px;
+        }
+        .details__header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 20px 24px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .details__header:hover { background: #f5f5f0; }
+        .details__title {
+            font-family: var(--font-body);
+            font-size: 0.9rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--dark-text);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .details__icon {
+            width: 10px; height: 10px;
+            border-radius: 0;
+            flex-shrink: 0;
+        }
+        .details__toggle {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: var(--dark-text);
+            transition: transform 0.3s;
+        }
+        .details__body {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease, padding 0.4s ease;
+        }
+        .details__body.open {
+            max-height: 600px;
+            padding: 0 24px 20px;
+        }
+        .details__item {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 0.85rem;
+            color: #444;
+        }
+        .details__item:last-child { border-bottom: none; }
+        .details__item-icon { font-size: 0.85rem; flex-shrink: 0; margin-top: 3px; }
+        .pass { color: #2d8a4e; }
+        .fail { color: var(--red); }
+        .warn { color: #d4740a; }
+
+        /* Bottom CTA */
+        .audit-cta {
+            text-align: center;
+            padding: 80px 48px;
+            background: var(--golden);
+            border-top: 2px solid var(--dark-text);
+            border-bottom: 2px solid var(--dark-text);
+        }
+        .audit-cta__title {
+            font-family: var(--font-body);
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 900;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+            color: var(--dark-text);
+            line-height: 0.95;
+        }
+        .audit-cta__sub {
+            font-size: 0.95rem;
+            color: var(--dark-text);
+            max-width: 480px;
+            margin: 0 auto 28px;
+            line-height: 1.7;
+        }
+        .audit-cta__btn {
+            display: inline-block;
+            padding: 18px 44px;
+            font-family: var(--font-body);
+            font-size: 0.95rem;
+            font-weight: 600;
+            text-transform: none;
+            letter-spacing: 0.05em;
+            background: var(--red);
+            color: var(--white);
+            border: 2px solid var(--dark-text);
+            box-shadow: 4px 4px 0 var(--dark-text);
+            transition: all 0.25s ease;
+        }
+        .audit-cta__btn:hover {
+            background: #8a3a2e;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 var(--dark-text);
+        }
+
+        /* Inline dynamic CTA */
+        .results-cta-card {
+            margin: 0 0 48px;
+            padding: 32px;
+            border: 2px solid var(--dark-text);
+            box-shadow: 4px 4px 0 var(--dark-text);
+            background: #fff;
+            color: var(--dark-text);
+        }
+        .results-cta-card h3 {
+            font-family: var(--font-body);
+            font-weight: 800;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            margin: 0 0 12px;
+            color: var(--dark-text);
+        }
+        .results-cta-card p {
+            font-size: 0.9rem;
+            line-height: 1.7;
+            color: #444;
+            margin: 0 0 12px;
+        }
+        .results-cta-card ul {
+            margin: 0 0 16px;
+            padding-left: 1.2rem;
+            line-height: 1.8;
+            font-size: 0.85rem;
+            color: #444;
+        }
+        .results-cta-card .cta-btn-inline {
+            display: inline-block;
+            padding: 14px 36px;
+            font-family: var(--font-body);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: none;
+            letter-spacing: 0.05em;
+            background: var(--red);
+            color: #fff;
+            border: 2px solid var(--dark-text);
+            box-shadow: 4px 4px 0 var(--dark-text);
+            transition: all 0.25s ease;
+            margin-top: 8px;
+        }
+        .results-cta-card .cta-btn-inline:hover {
+            background: #8a3a2e;
+            transform: translate(-2px, -2px);
+            box-shadow: 6px 6px 0 var(--dark-text);
+        }
+
+        /* Error */
+        .audit-error {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+        .audit-error.active { display: block; }
+        .audit-error__msg {
+            color: var(--red);
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .audit-error__retry {
+            color: var(--dark-text);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        .audit-footer {
+            text-align: center;
+            padding: 40px 48px;
+            background: var(--golden);
+        }
+        .audit-footer a {
+            color: var(--dark-text);
+            font-weight: 700;
+            transition: color 0.3s;
+        }
+        .audit-footer a:hover { color: var(--red); }
+        .audit-footer__text {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--dark-text);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav { padding: 10px 24px; }
+            .nav__logo { font-size: 2.4rem; }
+            .nav__links { gap: 12px; }
+            .nav__link { padding: 8px 16px; font-size: 0.75rem; }
+            .audit-hero { padding: 110px 24px 60px; }
+            .audit-form__row { flex-direction: column; }
+
+            .scores { grid-template-columns: repeat(2, 1fr); }
+            .audit-results { padding: 40px 20px 60px; }
+            .audit-cta { padding: 60px 24px; }
+        }
+        @media (max-width: 480px) {
+            .scores { grid-template-columns: 1fr; }
+            .nav__link:first-child { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Nav -->
+    <nav class="nav">
+        <a href="index.html" class="nav__logo">OP</a>
+        <div class="nav__links">
+            <a href="pricing.html" class="nav__link">Pricing</a>
+            <a href="index.html" class="nav__link">← Back</a>
+        </div>
+    </nav>
+
+    <!-- Hero & Form -->
+    <section class="audit-hero">
+        <div class="audit-hero__label">~ free website audit ~</div>
+        <h1 class="audit-hero__title" id="heroTitle">How Does Your<br>Site <span class="accent">Score?</span></h1>
+        <p class="audit-hero__sub" id="heroSub">Enter your URL and get an instant report on performance, SEO, mobile-friendliness, and accessibility. Find out what's holding your business back — in 30 seconds.</p>
+
+        <div class="audit-form" id="auditForm">
+            <div class="audit-form__row">
+                <input type="url" class="audit-form__input" id="urlInput" placeholder="https://yourbusiness.com" autocomplete="url" required>
+                <button class="audit-form__btn" id="auditBtn" onclick="startAudit()">Audit My Site →</button>
+            </div>
+            <div class="audit-form__note">Powered by Google PageSpeed. No sign-up required.</div>
+        </div>
+
+        <!-- Lead Capture -->
+        <div class="lead-capture" id="leadCapture">
+            <div class="lead-capture__title">Your results are ready!</div>
+            <div class="lead-capture__sub">Enter your info to see your full report. We'll include personalized recommendations.</div>
+            <div class="lead-capture__row">
+                <input type="text" class="audit-form__input" id="leadName" placeholder="Your name">
+                <input type="email" class="audit-form__input" id="leadEmail" placeholder="you@company.com">
+            </div>
+            <input type="tel" class="audit-form__input" id="leadPhone" placeholder="Phone (optional)">
+            <button class="audit-form__btn" onclick="submitLead()" style="width:100%;">Show My Results →</button>
+            <div class="lead-capture__error" id="leadError" style="color:var(--red);font-size:0.85rem;text-align:center;display:none;"></div>
+        </div>
+
+        <!-- Loading -->
+        <div class="audit-loading" id="auditLoading">
+            <div class="audit-loading__title">Analyzing your site...</div>
+            <div class="audit-loading__bar">
+                <div class="audit-loading__fill" id="loadingFill"></div>
+            </div>
+            <div class="audit-loading__status" id="loadingStatus">Connecting to Google PageSpeed...</div>
+        </div>
+
+        <!-- Error -->
+        <div class="audit-error" id="auditError">
+            <div class="audit-error__msg" id="errorMsg"></div>
+            <div class="audit-error__retry" onclick="resetForm()">Try another URL →</div>
+        </div>
+    </section>
+
+    <!-- Results -->
+    <section class="audit-results" id="auditResults">
+        <div class="audit-results__inner">
+            <div class="results__url" id="resultsUrl"></div>
+
+            <!-- Score Cards -->
+            <div class="scores" id="scoreCards"></div>
+            <div id="auditCta"></div>
+
+            <!-- Detailed Findings -->
+            <div class="details" id="detailSections"></div>
+
+        </div>
+    </section>
+
+    <!-- CTA (full-width, flush) -->
+    <div class="audit-cta" id="auditCtaBottom" style="display:none;">
+        <h2 class="audit-cta__title">Want Us To<br>Fix This?</h2>
+        <p class="audit-cta__sub">We'll take your audit results and turn them into a fast, beautiful, high-ranking website. Free 30-minute strategy call — no strings.</p>
+        <a href="index.html#contact" class="audit-cta__btn">Book a Free Call →</a>
+    </div>
+
+    <!-- Footer -->
+    <div class="audit-footer">
+        <p class="audit-footer__text">© 2026 <a href="index.html">On Point</a> — Web Design, SEO & AI for New Port Richey Businesses</p>
+    </div>
+
+    <script>
+    const API_BASE = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed';
+    const API_KEY = 'AIzaSyCNcCKyO6BcP2dUR-YPwsGfw-y6yauQxOg';
+    let auditData = null;
+
+    const loadingMessages = [
+        'Connecting to Google PageSpeed...',
+        'Testing mobile responsiveness...',
+        'Analyzing page load speed...',
+        'Checking SEO fundamentals...',
+        'Evaluating accessibility...',
+        'Scanning security headers...',
+        'Compiling your results...'
+    ];
+
+    function normalizeUrl(url) {
+        url = url.trim();
+        if (!url.match(/^https?:\/\//i)) url = 'https://' + url;
+        return url;
+    }
+
+    async function startAudit() {
+        const input = document.getElementById('urlInput');
+        const url = normalizeUrl(input.value);
+
+        if (!url || url === 'https://') {
+            input.style.borderColor = 'var(--red)';
+            setTimeout(() => input.style.borderColor = '', 2000);
+            return;
+        }
+
+        document.getElementById('auditForm').style.display = 'none';
+        document.getElementById('auditLoading').classList.add('active');
+        document.getElementById('auditError').classList.remove('active');
+
+        const fill = document.getElementById('loadingFill');
+        const status = document.getElementById('loadingStatus');
+        let progress = 0;
+        let msgIndex = 0;
+
+        const progressInterval = setInterval(() => {
+            progress = Math.min(progress + Math.random() * 12, 85);
+            fill.style.width = progress + '%';
+            if (msgIndex < loadingMessages.length - 1) {
+                msgIndex++;
+                status.textContent = loadingMessages[msgIndex];
+            }
+        }, 2500);
+
+        try {
+            const [mobileRes, desktopRes] = await Promise.all([
+                fetch(`${API_BASE}?url=${encodeURIComponent(url)}&strategy=mobile&category=performance&category=seo&category=accessibility&category=best-practices&key=${API_KEY}`),
+                fetch(`${API_BASE}?url=${encodeURIComponent(url)}&strategy=desktop&category=performance&category=seo&category=accessibility&category=best-practices&key=${API_KEY}`)
+            ]);
+
+            if (!mobileRes.ok || !desktopRes.ok) {
+                const errData = await (mobileRes.ok ? desktopRes : mobileRes).json().catch(() => null);
+                const msg = errData?.error?.message || 'Could not analyze that URL. Make sure the website is live and publicly accessible.';
+                throw new Error(msg);
+            }
+
+            const mobile = await mobileRes.json();
+            const desktop = await desktopRes.json();
+
+            if (mobile.error) throw new Error(mobile.error.message || 'Google could not analyze that URL.');
+
+            auditData = { mobile, desktop, url };
+
+            clearInterval(progressInterval);
+            fill.style.width = '100%';
+            status.textContent = 'Done!';
+
+            setTimeout(() => {
+                document.getElementById('auditLoading').classList.remove('active');
+                document.getElementById('leadCapture').classList.add('active');
+            }, 600);
+
+        } catch (err) {
+            clearInterval(progressInterval);
+            document.getElementById('auditLoading').classList.remove('active');
+            document.getElementById('auditError').classList.add('active');
+            document.getElementById('errorMsg').textContent = err.message || 'Something went wrong. Please try again.';
+        }
+    }
+
+    function resetForm() {
+        document.getElementById('auditForm').style.display = 'flex';
+        document.getElementById('auditError').classList.remove('active');
+        document.getElementById('auditLoading').classList.remove('active');
+        document.getElementById('leadCapture').classList.remove('active');
+        document.getElementById('auditResults').classList.remove('active');
+        document.getElementById('auditCtaBottom').style.display = 'none';
+        document.getElementById('heroTitle').innerHTML = 'How Does Your<br>Site <span class="accent">Score?</span>';
+        document.getElementById('heroSub').textContent = 'Enter your URL and get an instant report on performance, SEO, mobile-friendliness, and accessibility. Find out what\'s holding your business back — in 30 seconds.';
+        document.getElementById('loadingFill').style.width = '0%';
+        document.getElementById('urlInput').value = '';
+        auditData = null;
+    }
+
+    function getGrade(score) {
+        if (score >= 90) return { letter: 'A', class: 'grade-a' };
+        if (score >= 70) return { letter: 'B', class: 'grade-b' };
+        if (score >= 50) return { letter: 'C', class: 'grade-c' };
+        if (score >= 30) return { letter: 'D', class: 'grade-d' };
+        return { letter: 'F', class: 'grade-f' };
+    }
+
+    function getColor(score) {
+        if (score >= 90) return '#2d8a4e';
+        if (score >= 70) return '#b8860b';
+        if (score >= 50) return '#d4740a';
+        return '#a24436';
+    }
+
+    function submitLead() {
+        const name = document.getElementById('leadName').value.trim();
+        const email = document.getElementById('leadEmail').value.trim();
+        const error = document.getElementById('leadError');
+
+        if (!name || !email) {
+            error.textContent = 'Please enter your name and email to view your results.';
+            error.style.display = 'block';
+            if (!name) document.getElementById('leadName').style.borderColor = 'var(--red)';
+            if (!email) document.getElementById('leadEmail').style.borderColor = 'var(--red)';
+            return;
+        }
+
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+            error.textContent = 'Please enter a valid email address.';
+            error.style.display = 'block';
+            document.getElementById('leadEmail').style.borderColor = 'var(--red)';
+            return;
+        }
+
+        error.style.display = 'none';
+        showResults();
+    }
+
+    function showResults() {
+        if (!auditData) return;
+
+        const name = document.getElementById('leadName').value.trim();
+        const email = document.getElementById('leadEmail').value.trim();
+        const phone = document.getElementById('leadPhone').value.trim();
+
+        if (name && email) {
+            const mobile = auditData.mobile.lighthouseResult;
+            const mScores = mobile.categories;
+            const perf = Math.round((mScores.performance?.score || 0) * 100);
+            const seo = Math.round((mScores.seo?.score || 0) * 100);
+            const a11y = Math.round((mScores.accessibility?.score || 0) * 100);
+            const bp = Math.round((mScores['best-practices']?.score || 0) * 100);
+
+            fetch('/api/send-audit', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({
+                    name, email, phone: phone || '', url: auditData.url,
+                    scores: { performance: perf, seo, accessibility: a11y, bestPractices: bp }
+                })
+            }).then(r => r.json()).then(d => console.log('Audit emails sent:', d)).catch(e => console.warn('Audit email error:', e));
+        }
+
+        document.getElementById('leadCapture').classList.remove('active');
+
+        const mobile = auditData.mobile.lighthouseResult;
+        const categories = mobile.categories;
+        const scores = {
+            performance: Math.round((categories.performance?.score || 0) * 100),
+            seo: Math.round((categories.seo?.score || 0) * 100),
+            accessibility: Math.round((categories.accessibility?.score || 0) * 100),
+            bestPractices: Math.round((categories['best-practices']?.score || 0) * 100)
+        };
+
+        document.getElementById('resultsUrl').textContent = 'Results for: ' + auditData.url;
+
+        const scoreCards = document.getElementById('scoreCards');
+        const cardData = [
+            { label: 'Performance', key: 'performance', desc: 'How fast your site loads' },
+            { label: 'SEO', key: 'seo', desc: 'Search engine visibility' },
+            { label: 'Accessibility', key: 'accessibility', desc: 'Usable by everyone' },
+            { label: 'Best Practices', key: 'bestPractices', desc: 'Security & standards' }
+        ];
+
+        scoreCards.innerHTML = cardData.map(c => {
+            const score = scores[c.key];
+            const grade = getGrade(score);
+            const color = getColor(score);
+            const offset = 276.46 - (276.46 * score / 100);
+            return `
+                <div class="score-card">
+                    <div class="score-card__label">${c.label}</div>
+                    <div class="score-card__ring">
+                        <svg viewBox="0 0 100 100">
+                            <circle class="ring-bg" />
+                            <circle class="ring-fill" style="stroke:${color};stroke-dashoffset:${offset}" />
+                        </svg>
+                        <div class="score-card__value" style="color:${color}">${score}</div>
+                    </div>
+                    <div class="score-card__grade ${grade.class}">${grade.letter} — ${c.desc}</div>
+                </div>
+            `;
+        }).join('');
+
+        // Detail sections
+        const detailSections = document.getElementById('detailSections');
+        const audits = mobile.audits;
+
+        const sections = [
+            {
+                title: 'Performance', color: getColor(scores.performance),
+                items: [
+                    { id: 'first-contentful-paint', label: 'First Contentful Paint' },
+                    { id: 'largest-contentful-paint', label: 'Largest Contentful Paint' },
+                    { id: 'cumulative-layout-shift', label: 'Cumulative Layout Shift' },
+                    { id: 'total-blocking-time', label: 'Total Blocking Time' },
+                    { id: 'speed-index', label: 'Speed Index' },
+                    { id: 'render-blocking-resources', label: 'Render-Blocking Resources' },
+                    { id: 'uses-optimized-images', label: 'Image Optimization' },
+                    { id: 'uses-text-compression', label: 'Text Compression' },
+                    { id: 'efficient-animated-content', label: 'Efficient Animations' },
+                    { id: 'unminified-css', label: 'CSS Minification' },
+                    { id: 'unminified-javascript', label: 'JS Minification' }
+                ]
+            },
+            {
+                title: 'SEO', color: getColor(scores.seo),
+                items: [
+                    { id: 'document-title', label: 'Page Title' },
+                    { id: 'meta-description', label: 'Meta Description' },
+                    { id: 'http-status-code', label: 'HTTP Status Code' },
+                    { id: 'link-text', label: 'Descriptive Link Text' },
+                    { id: 'is-crawlable', label: 'Page is Crawlable' },
+                    { id: 'robots-txt', label: 'robots.txt Valid' },
+                    { id: 'hreflang', label: 'hreflang Tags' },
+                    { id: 'canonical', label: 'Canonical URL' },
+                    { id: 'font-size', label: 'Font Size Legible' },
+                    { id: 'tap-targets', label: 'Tap Targets Sized' }
+                ]
+            },
+            {
+                title: 'Accessibility', color: getColor(scores.accessibility),
+                items: [
+                    { id: 'color-contrast', label: 'Color Contrast' },
+                    { id: 'image-alt', label: 'Image Alt Text' },
+                    { id: 'heading-order', label: 'Heading Order' },
+                    { id: 'html-has-lang', label: 'HTML lang Attribute' },
+                    { id: 'document-title', label: 'Document Title' },
+                    { id: 'button-name', label: 'Button Labels' },
+                    { id: 'link-name', label: 'Link Labels' },
+                    { id: 'label', label: 'Form Labels' },
+                    { id: 'tabindex', label: 'Tab Order' },
+                    { id: 'aria-roles', label: 'ARIA Roles' }
+                ]
+            },
+            {
+                title: 'Best Practices', color: getColor(scores.bestPractices),
+                items: [
+                    { id: 'is-on-https', label: 'HTTPS' },
+                    { id: 'geolocation-on-start', label: 'Geolocation Permission' },
+                    { id: 'no-vulnerable-libraries', label: 'No Vulnerable Libraries' },
+                    { id: 'csp-xss', label: 'CSP XSS Prevention' },
+                    { id: 'errors-in-console', label: 'Console Errors' },
+                    { id: 'image-aspect-ratio', label: 'Image Aspect Ratios' },
+                    { id: 'deprecations', label: 'No Deprecated APIs' },
+                    { id: 'third-party-cookies', label: 'Third-Party Cookies' }
+                ]
+            }
+        ];
+
+        detailSections.innerHTML = sections.map(section => {
+            const items = section.items.map(item => {
+                const audit = audits[item.id];
+                if (!audit) return '';
+                const passed = audit.score === 1 || audit.score === null;
+                const icon = passed ? '✓' : audit.score >= 0.5 ? '⚠' : '✗';
+                const cls = passed ? 'pass' : audit.score >= 0.5 ? 'warn' : 'fail';
+                const display = audit.displayValue ? ` — ${audit.displayValue}` : '';
+                return `
+                    <div class="details__item">
+                        <span class="details__item-icon ${cls}">${icon}</span>
+                        <span>${item.label}${display}</span>
+                    </div>
+                `;
+            }).filter(Boolean).join('');
+
+            return `
+                <div class="details__section">
+                    <div class="details__header" onclick="toggleDetails(this)">
+                        <div class="details__title">
+                            <span class="details__icon" style="background:${section.color}"></span>
+                            ${section.title}
+                        </div>
+                        <span class="details__toggle">+</span>
+                    </div>
+                    <div class="details__body">${items}</div>
+                </div>
+            `;
+        }).join('');
+
+        // Dynamic CTA
+        const issues = [];
+        const firstName = document.getElementById('leadName').value.trim().split(' ')[0] || 'there';
+
+        if (scores.performance < 50) {
+            issues.push('<strong>⚠️ Your site is critically slow.</strong> 53% of mobile visitors abandon a page that takes longer than 3 seconds to load. That\'s potential customers gone before they even see what you offer.');
+        } else if (scores.performance < 80) {
+            issues.push('<strong>⚠️ Your site speed needs work.</strong> Every extra second of load time costs roughly 7% in conversions. A site loading in 5s instead of 2s? That\'s 20% of sales walking out the door.');
+        }
+
+        if (scores.seo < 50) {
+            issues.push('<strong>🔍 You\'re invisible on Google.</strong> 75% of people never scroll past the first page. If your site isn\'t optimized, your competitors are getting the clicks meant for you.');
+        } else if (scores.seo < 80) {
+            issues.push('<strong>🔍 Your SEO has gaps costing you traffic.</strong> 46% of all Google searches are looking for local businesses. Missing meta tags or poor structure means you\'re handing those customers to competitors.');
+        }
+
+        if (scores.accessibility < 50) {
+            issues.push('<strong>🌐 Your site is difficult for many visitors to use.</strong> 1 in 4 adults in the U.S. has a disability. An inaccessible site loses customers and creates legal liability.');
+        } else if (scores.accessibility < 80) {
+            issues.push('<strong>🌐 Accessibility improvements needed.</strong> Google favors accessible sites — proper contrast, labeled buttons, and semantic HTML boost your ranking <em>and</em> your reach.');
+        }
+
+        if (scores.bestPractices < 50) {
+            issues.push('<strong>🔒 Security & trust issues detected.</strong> 85% of consumers won\'t do business with a site they don\'t trust. Missing HTTPS or outdated code sends the wrong message.');
+        } else if (scores.bestPractices < 80) {
+            issues.push('<strong>🔒 Best practice issues found.</strong> Browser warnings and outdated practices quietly erode credibility. Visitors may not know why, but something feels "off."');
+        }
+
+        const avgScore = Math.round((scores.performance + scores.seo + scores.accessibility + scores.bestPractices) / 4);
+        let ctaHtml = '';
+
+        if (avgScore >= 90) {
+            ctaHtml = `
+                <div class="results-cta-card">
+                    <h3>Nice work, ${firstName}.</h3>
+                    <p>Your site is in great shape. If you want to take it to the next level — faster load times, higher conversions, or a fresh design — we can help.</p>
+                    <a href="#" onclick="goContact()" class="cta-btn-inline">Book a Free Consultation →</a>
+                </div>`;
+        } else {
+            const urgency = avgScore < 50
+                ? `<strong>Your website is actively losing you customers.</strong> Here's what we found:`
+                : `<strong>Your website has room for improvement.</strong> Here's what stood out:`;
+
+            ctaHtml = `
+                <div class="results-cta-card">
+                    <h3>Hey ${firstName} — let's be real.</h3>
+                    <p>${urgency}</p>
+                    <ul>${issues.map(i => `<li>${i}</li>`).join('')}</ul>
+                    <p>The good news? <strong>Every one of these problems is fixable.</strong> We've helped local businesses turn scores like yours into sites that actually rank, convert, and grow.</p>
+                    <a href="#" onclick="goContact()" class="cta-btn-inline">Book a Free Consultation →</a>
+                </div>`;
+        }
+
+        const ctaContainer = document.getElementById('auditCta');
+        if (ctaContainer) ctaContainer.innerHTML = ctaHtml;
+
+        // Update hero text and shrink it
+        const hero = document.querySelector('.audit-hero');
+        hero.style.minHeight = 'auto';
+        hero.style.padding = '120px 48px 60px';
+        document.getElementById('heroTitle').innerHTML = 'Your Results<br>Are <span class="accent">In.</span>';
+        document.getElementById('heroSub').textContent = 'Scroll down to see how your site stacks up across performance, SEO, accessibility, and best practices.';
+
+        document.getElementById('auditResults').classList.add('active');
+        document.getElementById('auditCtaBottom').style.display = 'block';
+        document.getElementById('auditResults').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    function toggleDetails(el) {
+        const body = el.nextElementSibling;
+        const toggle = el.querySelector('.details__toggle');
+        body.classList.toggle('open');
+        toggle.textContent = body.classList.contains('open') ? '−' : '+';
+    }
+
+    function goContact() {
+        const n = encodeURIComponent(document.getElementById('leadName').value.trim());
+        const e = encodeURIComponent(document.getElementById('leadEmail').value.trim());
+        window.location.href = `index.html?name=${n}&email=${e}#contact`;
+    }
+
+    document.getElementById('urlInput').addEventListener('keydown', e => {
+        if (e.key === 'Enter') startAudit();
+    });
+    </script>
+
+</body>
+</html>

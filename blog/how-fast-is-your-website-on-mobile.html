@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="If your site takes more than 3 seconds to load on a phone, half your visitors are already gone. Here's how to test your speed and fix the most common problems.">
+    <meta name="robots" content="index, follow">
+    <title>How Fast Is Your Website on Mobile? (And Why It Matters More Than You Think) — On Point Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/obviously.css">
+    <link rel="stylesheet" href="../css/styles.min.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <style>
+        .post-page { background: #fff; min-height: 100vh; }
+        .post { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+        .post__tag { font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #a24436; margin-bottom: 12px; }
+        .post__title { font-family: var(--font-body); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; text-transform: uppercase; color: #1a1a1a; line-height: 1.05; margin-bottom: 16px; }
+        .post__date { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; }
+        .post__hero { width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 40px; border: 2px solid #1a1a1a; box-shadow: 4px 4px 0 #1a1a1a; }
+        .post h2 { font-family: var(--font-body); font-size: 1.4rem; font-weight: 900; color: #1a1a1a; margin: 48px 0 12px; text-transform: uppercase; padding-top: 32px; border-top: 2px solid #1a1a1a; }
+        .post h2:first-of-type { border-top: none; padding-top: 0; }
+        .post h3 { font-family: var(--font-body); font-size: 1.15rem; font-weight: 700; color: #1a1a1a; margin: 32px 0 10px; }
+        .post p { font-family: var(--font-body); color: #444; font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
+        .post ul, .post ol { padding-left: 20px; margin: 12px 0 20px; }
+        .post li { font-family: var(--font-body); color: #444; font-size: 0.95rem; line-height: 1.8; margin-bottom: 6px; }
+        .post a { color: #a24436; text-decoration: none; }
+        .post a:hover { text-decoration: underline; }
+        .post strong { color: #1a1a1a; }
+        .post__img { width: 100%; margin: 24px 0; border: 2px solid #1a1a1a; box-shadow: 4px 4px 0 #1a1a1a; }
+        .post__cta { margin-top: 60px; padding: 40px; background: #a24436; border: 2px solid #1a1a1a; box-shadow: 4px 4px 0 #1a1a1a; text-align: center; }
+        .post__cta p { color: #fff; font-size: 1rem; margin-bottom: 16px; }
+        .post__cta p strong { color: #fff; }
+        .post__cta a { display: inline-flex; align-items: center; padding: 14px 32px; background: #ffcd61; color: #1a1a1a; font-family: var(--font-body); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; border: 2px solid #1a1a1a; box-shadow: 3px 3px 0 #1a1a1a; transition: all 0.25s ease; }
+        .post__cta a:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 #1a1a1a; text-decoration: none; }
+        @media (max-width: 768px) { .post { padding: 24px 20px 60px; } .post__cta { padding: 24px; } }
+    </style>
+</head>
+<body class="post-page">
+
+    <!-- Nav -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nav__logo">OP</a>
+        <div class="nav__links">
+            <a href="../index.html#about" class="nav__link">About</a>
+            <a href="../pricing.html" class="nav__link">Pricing</a>
+            <a href="../portfolio.html" class="nav__link">Work</a>
+            <a href="../blog.html" class="nav__link">Blog</a>
+            <a href="../index.html#contact" class="nav__link">Contact</a>
+        </div>
+        <a href="../index.html#contact" class="nav__cta">Get a Quote</a>
+        <button class="nav__menu-btn" id="nav-menu" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+        <a href="../index.html#about">About</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../portfolio.html">Work</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../index.html#contact">Contact</a>
+    </div>
+
+    <article class="post">
+        <div class="post__tag">Web Design</div>
+        <h1 class="post__title">How Fast Is Your Website on Mobile? (And Why It Matters More Than You Think)</h1>
+        <div class="post__date">February 25, 2026</div>
+        <img loading="lazy" class="post__hero" src="../assets/blog/mobile-website-speed.webp" alt="How Fast Is Your Website on Mobile? (And Why It Matters More Than You Think)">
+        <h1>How Fast Is Your Website on Mobile? (And Why It Matters More Than You Think)</h1>
+<p>If your website takes more than three seconds to load on a phone, roughly half your visitors are already gone. Not exaggerating — Google's own data backs this up. And in 2026, over 60% of all web traffic comes from mobile devices.</p>
+<p>For small businesses in Pinellas and Pasco County, this is a big deal. Your potential customers are searching for you on their phones — standing in line at Publix, sitting in their car, scrolling during lunch. If your site doesn't load fast, they're tapping the back button and calling your competitor instead.</p>
+<p>Here's how to figure out where you stand and what to do about it.</p>
+<h2>Step 1: Test Your Speed (It Takes 10 Seconds)</h2>
+<p>Go to <a href="https://pagespeed.web.dev/">Google PageSpeed Insights</a> and type in your website URL. Switch to the <strong>Mobile</strong> tab. You'll get a score from 0 to 100.</p>
+<ul>
+<li><strong>90-100:</strong> You're in great shape.</li>
+<li><strong>50-89:</strong> There's room for improvement.</li>
+<li><strong>Below 50:</strong> This is actively hurting your business.</li>
+</ul>
+<p>Google also uses this data to decide where you rank in search results. A slow mobile site doesn't just lose visitors — it loses visibility.</p>
+<h2>Step 2: Understand What's Slowing You Down</h2>
+<p>Nine times out of ten, it's one of these:</p>
+<h3>Oversized Images</h3>
+<p>This is the number one culprit for small business websites. That hero photo your photographer delivered at 4000x3000 pixels and 5MB? Your site is trying to load the full thing on a 6-inch phone screen. It doesn't need to be that big.</p>
+<strong>Fix it:</strong> Resize images to the actual display size (usually 1200px wide max for full-width images). Convert to WebP format — it's 25-30% smaller than JPEG with the same quality. Tools like <a href="https://squoosh.app/">Squoosh</a> make this free and easy.
+<h3>Too Many Plugins or Scripts</h3>
+<p>If you're on WordPress, check your plugin count. Every plugin adds code that runs when your page loads. Some add multiple JavaScript files. We've seen business sites running 30+ plugins when they only need 8-10.</p>
+<strong>Fix it:</strong> Deactivate plugins you're not using. Replace heavy plugins with lighter alternatives. Do you really need that animated slider that nobody clicks?
+<h3>Cheap or Overloaded Hosting</h3>
+<p>That $3/month hosting plan seemed like a deal. But shared hosting means your site is competing with hundreds of other sites for the same server resources. During peak hours, everything slows down.</p>
+<strong>Fix it:</strong> Upgrade to managed hosting or at least a better shared plan. For most small business sites, $15-30/month gets you dramatically better performance. It's one of the highest-ROI investments you can make.
+<h3>No Caching</h3>
+<p>When someone visits your site, the server builds the page from scratch every single time. Caching stores a pre-built version so it loads almost instantly on repeat visits.</p>
+<strong>Fix it:</strong> If you're on WordPress, install a caching plugin (WP Super Cache or LiteSpeed Cache are solid free options). If you're on a custom site, ask your developer about browser caching headers and CDN setup.
+<h2>Step 3: Prioritize What Loads First</h2>
+<p>Here's a trick most people miss: you don't need your entire page to load fast. You need the <strong>first screen</strong> to load fast — the part visitors see before scrolling.</p>
+<p>This is called "above the fold" content. Google measures something called <strong>Largest Contentful Paint (LCP)</strong>, which tracks how long the main content takes to appear. Your target is under 2.5 seconds.</p>
+<strong>Quick wins:</strong>
+<ul>
+<li>Load your hero image as a priority resource</li>
+<li>Defer JavaScript that isn't needed immediately</li>
+<li>Use system fonts or limit custom font files to 1-2 weights</li>
+<li>Remove any auto-playing video above the fold</li>
+</ul>
+<h2>Step 4: Don't Forget the Basics</h2>
+<p>A few more things that make a real difference:</p>
+<ul>
+<li><strong>Enable text compression</strong> (Gzip or Brotli) — most hosts support this with a settings toggle</li>
+<li><strong>Minimize redirects</strong> — every redirect adds load time</li>
+<li><strong>Use a CDN</strong> — Cloudflare's free plan works great for small sites and puts your content on servers closer to your visitors</li>
+</ul>
+<h2>The Bottom Line</h2>
+<p>Mobile speed isn't a nice-to-have anymore. It directly affects whether people find you, whether they stay, and whether they call you or your competitor. The good news? Most of these fixes are straightforward, and even small improvements make a noticeable difference.</p>
+<p>Not sure where to start? <a href="https://pagespeed.web.dev/">Run your site through PageSpeed Insights</a> and see what comes back. If the results aren't great and you want help fixing it, that's exactly what we do — <strong><a href="https://onpointfl.com/#contact">get in touch with On Point</a></strong> and we'll take a look.</p>
+        <div class="post__cta">
+            <p><strong>Ready to grow your business online?</strong></p>
+            <a href="../index.html#contact">Get Your Free Strategy Call →</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__brand">
+            <a href="/" class="footer__logo-text">OP</a>
+        </div>
+        <div class="footer__links">
+            <a href="../index.html#about">About</a>
+            <a href="../pricing.html">Pricing</a>
+            <a href="../portfolio.html">Work</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="../terms.html">Terms</a>
+            <a href="../privacy.html">Privacy</a>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 On Point. Web Design &amp; SEO in Pinellas County &amp; Pasco County, FL. All rights reserved.</p>
+            <a href="#" class="footer__top-btn">Back to Top &uarr;</a>
+        </div>
+    </footer>
+
+    <script defer src="../js/main.min.js"></script>
+</body>
+</html>

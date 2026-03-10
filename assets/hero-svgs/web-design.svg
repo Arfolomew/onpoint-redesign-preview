@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" fill="none">
+  <!-- Browser window frame -->
+  <rect x="40" y="60" width="320" height="280" rx="16" stroke="#4ecdc4" stroke-width="2" fill="rgba(78,205,196,0.06)"/>
+  <!-- Title bar -->
+  <line x1="40" y1="100" x2="360" y2="100" stroke="#4ecdc4" stroke-width="1.5" opacity="0.4"/>
+  <!-- Dots -->
+  <circle cx="68" cy="80" r="6" fill="#4ecdc4" opacity="0.6"/>
+  <circle cx="90" cy="80" r="6" stroke="#4ecdc4" stroke-width="1.5" opacity="0.3"/>
+  <circle cx="112" cy="80" r="6" stroke="#4ecdc4" stroke-width="1.5" opacity="0.3"/>
+  <!-- URL bar -->
+  <rect x="140" y="72" width="180" height="16" rx="8" stroke="#4ecdc4" stroke-width="1" opacity="0.2"/>
+  <!-- Layout blocks - header -->
+  <rect x="64" y="120" width="272" height="32" rx="4" fill="#4ecdc4" opacity="0.15"/>
+  <!-- Nav dots -->
+  <circle cx="290" cy="136" r="3" fill="#e8d5b8" opacity="0.5"/>
+  <circle cx="306" cy="136" r="3" fill="#e8d5b8" opacity="0.5"/>
+  <circle cx="322" cy="136" r="3" fill="#e8d5b8" opacity="0.5"/>
+  <!-- Hero block -->
+  <rect x="64" y="168" width="160" height="80" rx="6" fill="#4ecdc4" opacity="0.12"/>
+  <rect x="80" y="184" width="80" height="8" rx="4" fill="#e8d5b8" opacity="0.5"/>
+  <rect x="80" y="200" width="56" height="6" rx="3" fill="#e8d5b8" opacity="0.3"/>
+  <rect x="80" y="220" width="48" height="16" rx="4" stroke="#4ecdc4" stroke-width="1.5" opacity="0.5"/>
+  <!-- Sidebar image placeholder -->
+  <rect x="240" y="168" width="96" height="80" rx="6" stroke="#4ecdc4" stroke-width="1.5" opacity="0.25"/>
+  <path d="M260 228 L272 212 L284 220 L300 200 L320 228Z" fill="#4ecdc4" opacity="0.15"/>
+  <!-- Card row -->
+  <rect x="64" y="264" width="80" height="56" rx="6" stroke="#4ecdc4" stroke-width="1" opacity="0.2"/>
+  <rect x="160" y="264" width="80" height="56" rx="6" stroke="#4ecdc4" stroke-width="1" opacity="0.2"/>
+  <rect x="256" y="264" width="80" height="56" rx="6" fill="#4ecdc4" opacity="0.1"/>
+  <!-- Cursor -->
+  <path d="M310 200 L310 224 L318 218 L326 230" stroke="#e8d5b8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" opacity="0.7"/>
+</svg>
