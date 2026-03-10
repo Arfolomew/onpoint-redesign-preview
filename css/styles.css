@@ -510,12 +510,12 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 
 @media (max-width: 768px) {
   .hero__accent--left {
-    font-size: 26px;
-    right: calc(100% + 24px);
+    font-size: 20px;
+    right: calc(100% + 14px);
   }
   .hero__accent--right {
-    font-size: 26px;
-    left: calc(100% + 16px);
+    font-size: 20px;
+    left: calc(100% + 10px);
   }
 }
 
@@ -619,7 +619,20 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
 }
 @media (max-width: 380px) {
   .hero__heading {
-    font-size: 4rem;
+    font-size: 3.5rem;
+  }
+  .hero__accent--left {
+    font-size: 18px;
+    right: calc(100% + 10px);
+  }
+  .hero__accent--right {
+    font-size: 18px;
+    left: calc(100% + 8px);
+  }
+  .hero__btn {
+    font-size: 0.8rem;
+    padding: 14px 32px;
+    white-space: nowrap;
   }
 }
 
@@ -2090,6 +2103,14 @@ button { border: none; background: none; cursor: pointer; font: inherit; color: 
   .hero__floats { gap: 8px; }
   .float-card { width: 76px; }
   .float-card__label { font-size: 0.55rem; padding: 6px 0 8px; letter-spacing: 1px; }
+
+  .about-intro__eyebrow { font-size: 1.4rem; gap: 10px; }
+  .offerings__eyebrow { font-size: 1.4rem; gap: 10px; }
+  .about-intro__rule { max-width: 30px; }
+  .offerings__rule { max-width: 30px; }
+
+  .btn { padding: 14px 28px; font-size: 0.8rem; white-space: nowrap; }
+  .contact__form .btn--primary { padding: 14px 28px; font-size: 0.8rem; white-space: nowrap; }
 }
 
 /* --- Skip Link --- */
