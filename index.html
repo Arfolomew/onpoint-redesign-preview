@@ -145,13 +145,11 @@
 
     <!-- Loader -->
     <div class="loader" id="loader" aria-hidden="true">
-        <div class="loader__op">
-            <div class="loader__op-ring"></div>
-            <div class="loader__op-ring loader__op-ring--outer"></div>
-            <span class="loader__op-text">OP</span>
+        <div class="loader__bang">
+            <div class="loader__bar-shape"></div>
+            <div class="loader__dot"></div>
         </div>
-        <span class="loader__tagline">On Point Web Design</span>
-        <div class="loader__bar"></div>
+        <div class="loader__flash"></div>
     </div>
 
     <!-- Outer Background (grid + texture, visible outside content frame) -->
@@ -159,7 +157,7 @@
 
     <!-- Navigation -->
     <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="/" class="nav__logo">OP</a>
+        <a href="/" class="nav__logo"><img src="assets/logo-bang.svg" alt="On Point" class="nav__logo-icon"></a>
         
         <div class="nav__links">
             <a href="#about" class="nav__link">About</a>
@@ -169,20 +167,29 @@
             <a href="#contact" class="nav__link">Contact</a>
         </div>
         
-        <a href="#contact" class="nav__cta">Get a Quote</a>
+        <div class="nav__right">
+            <button class="nav__chat-btn" id="nav-chat-toggle">Chat</button>
+            <a href="#contact" class="nav__cta">Get a Quote</a>
+        </div>
 
-        <button class="nav__menu-btn" id="nav-menu" aria-label="Open menu" aria-expanded="false">
+        <div class="nav__right-mobile">
+            <button class="nav__chat-btn" id="nav-chat-toggle-mobile">Chat</button>
+            <button class="nav__menu-btn" id="nav-menu" aria-label="Open menu" aria-expanded="false">
             <span></span><span></span><span></span>
         </button>
+        </div>
     </nav>
 
     <!-- Mobile Menu -->
     <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
-        <a href="#about">About</a>
-        <a href="pricing.html">Pricing</a>
-        <a href="portfolio.html">Work</a>
-        <a href="blog.html">Blog</a>
-        <a href="#contact">Contact</a>
+        <button class="mobile-menu__close" id="mobile-menu-close" aria-label="Close menu">✕</button>
+        <nav class="mobile-menu__links">
+            <a href="#about">About</a>
+            <a href="pricing.html">Pricing</a>
+            <a href="portfolio.html">Work</a>
+            <a href="blog.html">Blog</a>
+            <a href="#contact">Contact</a>
+        </nav>
         <a href="#contact" class="mobile-menu__cta">Get a Quote</a>
     </div>
 
@@ -202,10 +209,9 @@
                     <span class="hero__line"><span class="hero__text">POINT</span></span>
                 </h1>
 
-                <p class="hero__subtitle">We'll transform your online presence from invisible to unmissable.</p>
+                <p class="hero__subtitle">We build websites that make your customers, Google, and even your Mom say <strong>WOW!</strong></p>
 
                 <a href="audit.html" class="hero__btn">Free Audit</a>
-                <img src="assets/hand_pointing.svg" alt="" class="hero__hand" aria-hidden="true">
             </div>
 
             <!-- Marquee -->
@@ -335,30 +341,7 @@
                         <input type="url" id="website" name="website" placeholder="https://yourbusiness.com" autocomplete="url">
                     </div>
                 </div>
-                <div class="form__row">
-                    <div class="form__group">
-                        <label for="service" class="form__label">Service Needed</label>
-                        <select id="service" name="service" required>
-                            <option value="" disabled selected>What do you need?</option>
-                            <option value="website">New Website</option>
-                            <option value="redesign">Website Redesign</option>
-                            <option value="seo">SEO & Growth</option>
-                            <option value="ecommerce">E-Commerce</option>
-                            <option value="ai">AI Chatbot</option>
-                            <option value="logo">Custom Logo Design</option>
-                            <option value="email">Email Setup &amp; Branding</option>
-                        </select>
-                    </div>
-                    <div class="form__group">
-                        <label for="contact-method" class="form__label">Preferred Contact Method</label>
-                        <select id="contact-method" name="contact_method">
-                            <option value="" disabled selected>How should we reach you?</option>
-                            <option value="email">Email</option>
-                            <option value="phone">Phone Call</option>
-                            <option value="either">Either Works</option>
-                        </select>
-                    </div>
-                </div>
+
                 <div class="form__group">
                     <label for="message" class="form__label">Project Details</label>
                     <textarea id="message" name="message" rows="5" placeholder="Tell us about your project, timeline, and goals..."></textarea>
@@ -380,14 +363,6 @@
                 <span class="contact-info-bar__label">Phone</span>
                 <span class="contact-info-bar__value">(727) 279-5862</span>
             </a>
-            <div class="contact-info-bar__item">
-                <span class="contact-info-bar__label">Based in</span>
-                <span class="contact-info-bar__value">New Port Richey, Florida</span>
-            </div>
-            <div class="contact-info-bar__item">
-                <span class="contact-info-bar__label">Response time</span>
-                <span class="contact-info-bar__value">Under 24 hours</span>
-            </div>
         </div>
 
         <!-- Service Areas -->
@@ -395,7 +370,7 @@
             <div class="areas__header reveal">
                 <span class="areas__label"><span class="areas__rule"></span>service areas<span class="areas__rule"></span></span>
                 <h2 class="areas__title">Pinellas & Pasco County, Florida</h2>
-                <p class="areas__subtitle">Web design, SEO & AI chatbots for local businesses across the New Port Richey region</p>
+
             </div>
             
             <div class="areas__grid reveal">
@@ -469,16 +444,22 @@
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="footer__brand">
-            <a href="/" class="footer__logo-text">OP</a>
+            <a href="/" class="footer__logo-text"><img src="assets/logo-bang.svg" alt="On Point" class="footer__logo-icon"></a>
         </div>
         
         <div class="footer__links">
             <a href="#about">About</a>
+            <span class="footer__dot">●</span>
             <a href="pricing.html">Pricing</a>
+            <span class="footer__dot">●</span>
             <a href="portfolio.html">Work</a>
+            <span class="footer__dot">●</span>
             <a href="blog.html">Blog</a>
+            <span class="footer__dot">●</span>
             <a href="#contact">Contact</a>
+            <span class="footer__dot">●</span>
             <a href="terms.html">Terms</a>
+            <span class="footer__dot">●</span>
             <a href="privacy.html">Privacy</a>
         </div>
         

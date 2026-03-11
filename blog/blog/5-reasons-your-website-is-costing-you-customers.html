@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Your website should be your best salesperson. Here are five signs it might be working against you instead — and what to do about it.">
+    <meta name="robots" content="index, follow">
+    <title>5 Reasons Your Website Is Costing You Customers — On Point Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Anton&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&family=Caveat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/obviously.css">
+    <link rel="stylesheet" href="../css/styles.min.css">
+    <link rel="icon" type="image/x-icon" href="../assets/favicon.ico">
+    <style>
+        .post-page { background: #fff; min-height: 100vh; }
+        .post { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
+        .post__tag { font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #a24436; margin-bottom: 12px; }
+        .post__title { font-family: var(--font-body); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; text-transform: uppercase; color: #000; line-height: 1.05; margin-bottom: 16px; }
+        .post__date { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; }
+        .post__hero { width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 40px; border: 2px solid #000; box-shadow: 4px 4px 0 #000; }
+        .post h2 { font-family: var(--font-body); font-size: 1.4rem; font-weight: 900; color: #000; margin: 48px 0 12px; text-transform: uppercase; padding-top: 32px; border-top: 2px solid #000; }
+        .post h2:first-of-type { border-top: none; padding-top: 0; }
+        .post h3 { font-family: var(--font-body); font-size: 1.15rem; font-weight: 700; color: #000; margin: 32px 0 10px; }
+        .post p { font-family: var(--font-body); color: #444; font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
+        .post ul, .post ol { padding-left: 20px; margin: 12px 0 20px; }
+        .post li { font-family: var(--font-body); color: #444; font-size: 0.95rem; line-height: 1.8; margin-bottom: 6px; }
+        .post a { color: #a24436; text-decoration: none; }
+        .post a:hover { text-decoration: underline; }
+        .post strong { color: #000; }
+        .post__img { width: 100%; margin: 24px 0; border: 2px solid #000; box-shadow: 4px 4px 0 #000; }
+        .post__cta { margin-top: 60px; padding: 40px; background: #a24436; border: 2px solid #000; box-shadow: 4px 4px 0 #000; text-align: center; }
+        .post__cta p { color: #fff; font-size: 1rem; margin-bottom: 16px; }
+        .post__cta p strong { color: #fff; }
+        .post__cta a { display: inline-flex; align-items: center; padding: 14px 32px; background: #ffcd61; color: #000; font-family: var(--font-body); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; border: 2px solid #000; box-shadow: 3px 3px 0 #000; transition: all 0.25s ease; }
+        .post__cta a:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 #000; text-decoration: none; }
+        @media (max-width: 768px) { .post { padding: 24px 20px 60px; } .post__cta { padding: 24px; } }
+    </style>
+</head>
+<body class="post-page">
+
+    <!-- Nav -->
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+        <a href="/" class="nav__logo"><img src="../assets/logo-bang.svg" alt="On Point" class="nav__logo-icon"></a>
+        <div class="nav__links">
+            <a href="../index.html#about" class="nav__link">About</a>
+            <a href="../pricing.html" class="nav__link">Pricing</a>
+            <a href="../portfolio.html" class="nav__link">Work</a>
+            <a href="../blog.html" class="nav__link">Blog</a>
+            <a href="../index.html#contact" class="nav__link">Contact</a>
+        </div>
+        <a href="../index.html#contact" class="nav__cta">Get a Quote</a>
+        <button class="nav__menu-btn" id="nav-menu" aria-label="Open menu" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobile-menu" role="dialog" aria-label="Mobile navigation" aria-hidden="true">
+        <a href="../index.html#about">About</a>
+        <a href="../pricing.html">Pricing</a>
+        <a href="../portfolio.html">Work</a>
+        <a href="../blog.html">Blog</a>
+        <a href="../index.html#contact">Contact</a>
+    </div>
+
+    <article class="post">
+        <div class="post__tag">Web Design</div>
+        <h1 class="post__title">5 Reasons Your Website Is Costing You Customers</h1>
+        <div class="post__date">February 21, 2026</div>
+        
+        <p>You know your business is great. Your customers know it too — the ones who manage to find you. But what about everyone else? If your website isn't pulling its weight, it's not just sitting there doing nothing. It's actively costing you money.</p>
+<p>Here are five signs your website might be working against you — and what to do about it.</p>
+<h2>1. It Takes More Than 3 Seconds to Load</h2>
+<p>Google's own research shows that 53% of mobile users abandon a site that takes longer than 3 seconds to load. Three seconds. That's less time than it takes to read this sentence.</p>
+<p>If your site is built on a bloated template with stock plugins and unoptimized images, you're hemorrhaging visitors before they even see your homepage.</p>
+<strong>The fix:</strong> Compress images, minimize code, use a fast hosting provider, and ditch the 47 WordPress plugins you installed in 2019.
+<h2>2. It's Not Mobile-Friendly</h2>
+<p>Over 60% of web traffic in the New Port Richey area comes from mobile devices. If your site looks like a desktop page crammed onto a phone screen — tiny text, buttons you need a stylus to tap, horizontal scrolling — people will bounce.</p>
+<p>Google also uses mobile-first indexing, which means the mobile version of your site is what determines your search ranking. Not the desktop version.</p>
+<strong>The fix:</strong> Responsive design isn't optional anymore. Your site should look and function flawlessly on every screen size.
+<h2>3. You Can't Find Yourself on Google</h2>
+<p>Try this: open an incognito window and Google your business type + your city. Something like "plumber Clearwater FL" or "hair salon St Petersburg." If you're not on the first page, you're invisible to the majority of potential customers.</p>
+<p>95% of people never scroll past the first page of search results. Your competition is there. Are you?</p>
+<strong>The fix:</strong> SEO isn't magic — it's strategy. Proper keywords, local schema markup, Google Business Profile optimization, and quality content all play a role.
+<h2>4. There's No Clear Call to Action</h2>
+<p>Your website should guide visitors toward a specific action: call you, fill out a form, book an appointment, or visit your location. If someone lands on your homepage and doesn't immediately understand what to do next, they'll leave.</p>
+<strong>The fix:</strong> Every page needs a clear, visible call to action. Make it obvious. Make it easy. "Book a Free Consultation" beats "Contact Us" every time.
+<h2>5. It Looks Like It Was Built in 2015</h2>
+<p>First impressions are formed in 0.05 seconds. If your site looks dated — think clip art, Comic Sans adjacent fonts, or a "Welcome to our website!" banner — visitors will assume your business is equally outdated.</p>
+<p>Your website is often the first interaction someone has with your brand. It should reflect the quality of your work.</p>
+<strong>The fix:</strong> A modern, custom-designed website that communicates professionalism, builds trust, and actually represents what you do.
+<h2>The Bottom Line</h2>
+<p>Your website should be your best salesperson — working 24/7, making great first impressions, and converting visitors into customers. If it's not doing that, it's not just underperforming. It's actively losing you business.</p>
+<p>Want to know where your site stands? We offer a free, no-BS website audit. No pitch deck, no upsell — just a blunt assessment of what's working and what's not.</p>
+        <div class="post__cta">
+            <p><strong>Ready to grow your business online?</strong></p>
+            <a href="../index.html#contact">Get Your Free Strategy Call →</a>
+        </div>
+    </article>
+
+    <!-- Footer -->
+    <footer class="footer" role="contentinfo">
+        <div class="footer__brand">
+            <a href="/" class="footer__logo-text"><img src="../assets/logo-bang.svg" alt="On Point" class="footer__logo-icon"></a>
+        </div>
+        <div class="footer__links">
+            <a href="../index.html#about">About</a>
+            <a href="../pricing.html">Pricing</a>
+            <a href="../portfolio.html">Work</a>
+            <a href="../blog.html">Blog</a>
+            <a href="../index.html#contact">Contact</a>
+            <a href="../terms.html">Terms</a>
+            <a href="../privacy.html">Privacy</a>
+        </div>
+        <div class="footer__bottom">
+            <p>&copy; 2026 On Point. Web Design &amp; SEO in Pinellas County &amp; Pasco County, FL. All rights reserved.</p>
+            <a href="#" class="footer__top-btn">Back to Top &uarr;</a>
+        </div>
+    </footer>
+
+    <script defer src="../js/main.min.js"></script>
+</body>
+</html>

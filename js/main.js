@@ -21,6 +21,15 @@ window.addEventListener('load', () => {
 const navMenu = document.getElementById('nav-menu');
 const mobileMenu = document.getElementById('mobile-menu');
 
+const mobileClose = document.getElementById('mobile-menu-close');
+if (mobileClose && mobileMenu) {
+    mobileClose.addEventListener('click', () => {
+        mobileMenu.classList.remove('open');
+        navMenu.setAttribute('aria-expanded', 'false');
+        mobileMenu.setAttribute('aria-hidden', 'true');
+        document.body.style.overflow = '';
+    });
+}
 if (navMenu && mobileMenu) {
     navMenu.addEventListener('click', () => {
         const isOpen = mobileMenu.classList.toggle('open');
@@ -102,6 +111,16 @@ document.querySelectorAll('.areas__toggle').forEach(btn => {
 
 // --- Floating Cards Parallax ---
 let ticking = false;
+// Nav scroll effect
+const nav = document.querySelector('.nav');
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 50) {
+        nav.classList.add('scrolled');
+    } else {
+        nav.classList.remove('scrolled');
+    }
+});
+
 window.addEventListener('scroll', () => {
     if (!ticking) {
         requestAnimationFrame(() => {
@@ -118,17 +137,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// --- Nav Background on Scroll ---
-const nav = document.querySelector('.nav');
-if (nav) {
-    window.addEventListener('scroll', () => {
-        if (window.scrollY > 100) {
-            nav.style.borderBottomColor = 'rgba(255,255,255,0.08)';
-        } else {
-            nav.style.borderBottomColor = '';
-        }
-    });
-}
+
 
 // --- Staggered Reveal for Hero Children ---
 // Add delay attributes to hero children that have .reveal but no data-delay
@@ -185,3 +194,13 @@ if (contactForm) {
         });
     });
 }
+
+// --- Nav Chat Toggle ---
+document.querySelectorAll('.nav__chat-btn').forEach(btn => {
+    btn.addEventListener('click', () => {
+        const widget = document.getElementById('chat-widget');
+        if (widget) {
+            widget.classList.toggle('chat-widget--open');
+        }
+    });
+});
