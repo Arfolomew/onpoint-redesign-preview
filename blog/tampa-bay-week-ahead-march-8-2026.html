@@ -16,24 +16,24 @@
         .post-page { background: #fff; min-height: 100vh; }
         .post { max-width: 720px; margin: 0 auto; padding: 120px 24px 80px; }
         .post__tag { font-family: var(--font-body); font-size: 0.65rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #a24436; margin-bottom: 12px; }
-        .post__title { font-family: var(--font-body); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; text-transform: uppercase; color: #1a1a1a; line-height: 1.05; margin-bottom: 16px; }
+        .post__title { font-family: var(--font-body); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; text-transform: uppercase; color: #000; line-height: 1.05; margin-bottom: 16px; }
         .post__date { font-family: var(--font-body); font-size: 0.8rem; font-weight: 600; color: #999; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 40px; }
-        .post__hero { width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 40px; border: 2px solid #1a1a1a; box-shadow: 4px 4px 0 #1a1a1a; }
-        .post h2 { font-family: var(--font-body); font-size: 1.4rem; font-weight: 900; color: #1a1a1a; margin: 48px 0 12px; text-transform: uppercase; padding-top: 32px; border-top: 2px solid #1a1a1a; }
+        .post__hero { width: 100%; max-height: 400px; object-fit: cover; margin-bottom: 40px; border: 2px solid #000; box-shadow: 4px 4px 0 #000; }
+        .post h2 { font-family: var(--font-body); font-size: 1.4rem; font-weight: 900; color: #000; margin: 48px 0 12px; text-transform: uppercase; padding-top: 32px; border-top: 2px solid #000; }
         .post h2:first-of-type { border-top: none; padding-top: 0; }
-        .post h3 { font-family: var(--font-body); font-size: 1.15rem; font-weight: 700; color: #1a1a1a; margin: 32px 0 10px; }
+        .post h3 { font-family: var(--font-body); font-size: 1.15rem; font-weight: 700; color: #000; margin: 32px 0 10px; }
         .post p { font-family: var(--font-body); color: #444; font-size: 0.95rem; line-height: 1.8; margin-bottom: 16px; }
         .post ul, .post ol { padding-left: 20px; margin: 12px 0 20px; }
         .post li { font-family: var(--font-body); color: #444; font-size: 0.95rem; line-height: 1.8; margin-bottom: 6px; }
         .post a { color: #a24436; text-decoration: none; }
         .post a:hover { text-decoration: underline; }
-        .post strong { color: #1a1a1a; }
-        .post__img { width: 100%; margin: 24px 0; border: 2px solid #1a1a1a; box-shadow: 4px 4px 0 #1a1a1a; }
-        .post__cta { margin-top: 60px; padding: 40px; background: #a24436; border: 2px solid #1a1a1a; box-shadow: 4px 4px 0 #1a1a1a; text-align: center; }
+        .post strong { color: #000; }
+        .post__img { width: 100%; margin: 24px 0; border: 2px solid #000; box-shadow: 4px 4px 0 #000; }
+        .post__cta { margin-top: 60px; padding: 40px; background: #a24436; border: 2px solid #000; box-shadow: 4px 4px 0 #000; text-align: center; }
         .post__cta p { color: #fff; font-size: 1rem; margin-bottom: 16px; }
         .post__cta p strong { color: #fff; }
-        .post__cta a { display: inline-flex; align-items: center; padding: 14px 32px; background: #ffcd61; color: #1a1a1a; font-family: var(--font-body); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; border: 2px solid #1a1a1a; box-shadow: 3px 3px 0 #1a1a1a; transition: all 0.25s ease; }
-        .post__cta a:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 #1a1a1a; text-decoration: none; }
+        .post__cta a { display: inline-flex; align-items: center; padding: 14px 32px; background: #ffcd61; color: #000; font-family: var(--font-body); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; text-decoration: none; border: 2px solid #000; box-shadow: 3px 3px 0 #000; transition: all 0.25s ease; }
+        .post__cta a:hover { transform: translate(-2px, -2px); box-shadow: 5px 5px 0 #000; text-decoration: none; }
         @media (max-width: 768px) { .post { padding: 24px 20px 60px; } .post__cta { padding: 24px; } }
     </style>
 </head>
@@ -41,7 +41,7 @@
 
     <!-- Nav -->
     <nav class="nav" role="navigation" aria-label="Main navigation">
-        <a href="/" class="nav__logo">OP</a>
+        <a href="/" class="nav__logo"><img src="../assets/logo-bang.svg" alt="On Point" class="nav__logo-icon"></a>
         <div class="nav__links">
             <a href="../index.html#about" class="nav__link">About</a>
             <a href="../pricing.html" class="nav__link">Pricing</a>
@@ -121,7 +121,7 @@
     <!-- Footer -->
     <footer class="footer" role="contentinfo">
         <div class="footer__brand">
-            <a href="/" class="footer__logo-text">OP</a>
+            <a href="/" class="footer__logo-text"><img src="../assets/logo-bang.svg" alt="On Point" class="footer__logo-icon"></a>
         </div>
         <div class="footer__links">
             <a href="../index.html#about">About</a>
